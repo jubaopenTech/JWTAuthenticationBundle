@@ -1,0 +1,13 @@
+{
+    "name": "jubaopen/jwt-authentication-bundle",
+    "description": "This bundle provides JWT authentication for your Symfony REST API",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "zhanghua",
+            "email": "2533058383@qq.com"
+        }
+    ],
+    "require": {}
+}
