@@ -1,0 +1,154 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <!-- JWT Token Authenticator -->
+        <service id="jbp_jwt_authentication.jwt_token_authenticator" alias="jbp_jwt_authentication.security.guard.jwt_token_authenticator" />
+
+        <!-- JWT Encoders -->
+        <service id="jbp_jwt_authentication.encoder.abstract" class="JWTAuthenticationBundle\Encoder\DefaultEncoder" abstract="true" />
+        <service id="jbp_jwt_authentication.encoder.default" parent="jbp_jwt_authentication.encoder.abstract">
+            <argument type="service" id="jbp_jwt_authentication.jws_provider.default"/>
+        </service>
+        <service id="jbp_jwt_authentication.encoder.lcobucci" parent="jbp_jwt_authentication.encoder.abstract">
+            <argument type="service" id="jbp_jwt_authentication.jws_provider.lcobucci" />
+        </service>
+
+        <!-- JWT Manager / Default implementation -->
+        <service id="jbp_jwt_authentication.jwt_manager" class="JWTAuthenticationBundle\Services\JWTManager">
+            <argument type="service" id="jbp_jwt_authentication.encoder"/>
+            <argument type="service" id="event_dispatcher"/>
+            <call method="setUserIdentityField">
+                <argument>%jbp_jwt_authentication.user_identity_field%</argument>
+            </call>
+        </service>
+        <service id="JWTAuthenticationBundle\Services\JWTTokenManagerInterface" alias="jbp_jwt_authentication.jwt_manager" />
+
+        <!-- JWS Providers -->
+        <service id="JWTAuthenticationBundle\Services\JWSProvider\JWSProviderInterface" alias="jbp_jwt_authentication.jws_provider.default" />
+        <service id="jbp_jwt_authentication.jws_provider.default" class="JWTAuthenticationBundle\Services\JWSProvider\DefaultJWSProvider" public="false">
+            <argument type="service" id="jbp_jwt_authentication.key_loader"/>
+            <argument>%jbp_jwt_authentication.encoder.crypto_engine%</argument>
+            <argument>%jbp_jwt_authentication.encoder.signature_algorithm%</argument>
+            <argument>%jbp_jwt_authentication.token_ttl%</argument>
+            <argument>%jbp_jwt_authentication.refresh_ttl%</argument>
+        </service>
+
+        <service id="jbp_jwt_authentication.jws_provider.lcobucci" class="JWTAuthenticationBundle\Services\JWSProvider\LcobucciJWSProvider" public="false">
+            <argument type="service" id="jbp_jwt_authentication.key_loader.raw"/>
+            <argument>%jbp_jwt_authentication.encoder.crypto_engine%</argument>
+            <argument>%jbp_jwt_authentication.encoder.signature_algorithm%</argument>
+            <argument>%jbp_jwt_authentication.token_ttl%</argument>
+        </service>
+        <service id="jbp_jwt_authentication.security.guard.jwt_token_authenticator" class="JWTAuthenticationBundle\Security\Guard\JWTTokenAuthenticator">
+            <argument type="service" id="jbp_jwt_authentication.jwt_manager"/>
+            <argument type="service" id="event_dispatcher"/>
+            <argument type="service" id="jbp_jwt_authentication.extractor.chain_extractor"/>
+        </service>
+
+        <!-- JWT Authentication response interceptor -->
+        <service id="jbp_jwt_authentication.handler.authentication_success" class="JWTAuthenticationBundle\Security\Http\Authentication\AuthenticationSuccessHandler">
+            <argument type="service" id="jbp_jwt_authentication.jwt_manager"/>
+            <argument type="service" id="event_dispatcher"/>
+            <tag name="monolog.logger" channel="security" />
+        </service>
+        <service id="jbp_jwt_authentication.handler.authentication_failure" class="JWTAuthenticationBundle\Security\Http\Authentication\AuthenticationFailureHandler">
+            <tag name="monolog.logger" channel="security" />
+            <argument type="service" id="event_dispatcher"/>
+        </service>
+
+        <!-- Key Loaders -->
+        <service id="jbp_jwt_authentication.key_loader.abstract"  abstract="true" public="false">
+            <argument>%jbp_jwt_authentication.private_key_path%</argument>
+            <argument>%jbp_jwt_authentication.public_key_path%</argument>
+            <argument>%jbp_jwt_authentication.pass_phrase%</argument>
+        </service>
+        <service id="jbp_jwt_authentication.key_loader.openssl" class="JWTAuthenticationBundle\Services\KeyLoader\OpenSSLKeyLoader" parent="jbp_jwt_authentication.key_loader.abstract"/>
+        <service id="jbp_jwt_authentication.key_loader.raw" class="JWTAuthenticationBundle\Services\KeyLoader\RawKeyLoader" parent="jbp_jwt_authentication.key_loader.abstract"/>
+
+        <!-- Token Extractors -->
+        <service id="jbp_jwt_authentication.extractor.chain_extractor" class="JWTAuthenticationBundle\TokenExtractor\ChainTokenExtractor" public="false">
+            <argument type="collection" />
+        </service>
+        <service id="jbp_jwt_authentication.extractor.authorization_header_extractor" class="JWTAuthenticationBundle\TokenExtractor\AuthorizationHeaderTokenExtractor">
+            <argument /> <!-- Header Value Prefix -->
+            <argument /> <!-- Header Value Name -->
+        </service>
+        <service id="jbp_jwt_authentication.extractor.query_parameter_extractor" class="JWTAuthenticationBundle\TokenExtractor\QueryParameterTokenExtractor">
+            <argument /> <!-- Parameter Name -->
+        </service>
+        <service id="jbp_jwt_authentication.extractor.cookie_extractor" class="JWTAuthenticationBundle\TokenExtractor\CookieTokenExtractor">
+            <argument /> <!-- Name -->
+        </service>
+        <service public="false" id="jbp_jwt_authentication.security.jwt_user_provider" class="JWTAuthenticationBundle\Security\User\JWTUserProvider">
+            <argument />
+        </service>
+        <service id="JWTAuthenticationBundle\TokenExtractor\TokenExtractorInterface" alias="jbp_jwt_authentication.extractor.chain_extractor" />
+
+        <!-- Deprecated -->
+        <service id="jbp_jwt_authentication.security.authentication.provider" class="JWTAuthenticationBundle\Security\Authentication\Provider\JWTProvider" public="false">
+            <argument /> <!-- User Provider -->
+            <argument type="service" id="jbp_jwt_authentication.jwt_manager" />
+            <call method="setUserIdentityField">
+                <argument>%jbp_jwt_authentication.user_identity_field%</argument>
+            </call>
+            <argument type="service" id="event_dispatcher"/>
+            <deprecated>The "%service_id%" service is deprecated since JBPJWTAuthenticationBundle version 2.0 and will be removed in 3.0</deprecated>
+        </service>
+        <service id="jbp_jwt_authentication.security.authentication.listener" class="JWTAuthenticationBundle\Security\Firewall\JWTListener" public="false">
+            <argument type="service" id="security.token_storage"/>
+            <argument type="service" id="security.authentication.manager"/>
+            <argument /> <!-- Options -->
+            <call method="setDispatcher">
+                <argument type="service" id="event_dispatcher"/>
+            </call>
+            <deprecated>The "%service_id%" service is deprecated since JBPJWTAuthenticationBundle version 2.0 and will be removed in 3.0</deprecated>
+        </service>
+        <service id="jbp_jwt_authentication.security.authentication.entry_point" class="JWTAuthenticationBundle\Security\Http\EntryPoint\JWTEntryPoint" public="false">
+            <deprecated>The "%service_id%" service is deprecated since JBPJWTAuthenticationBundle version 2.0 and will be removed in 3.0</deprecated>
+        </service>
+        <service id="JWTAuthenticationBundle\Services\JWTTokenInterface" alias="jbp_jwt_authentication.jwt_manager" />
+
+        <!-- 自定义服务begin -->
+        <!-- token加密事件 -->
+        <service id="jwt.event.jwt_created_listener" class="JWTAuthenticationBundle\EventListener\JWTCreatedListener">
+            <argument type="service" id="request_stack"/>
+            <tag name="kernel.event_listener" event="jbp_jwt_authentication.on_jwt_created" method="onJWTCreated" />
+        </service>
+        <!-- token解密事件 -->
+        <service id="jwt.event.jwt_decoded_listener" class="JWTAuthenticationBundle\EventListener\JWTDecodedListener">
+            <argument type="service" id="request_stack"/>
+            <tag name="kernel.event_listener" event="jbp_jwt_authentication.on_jwt_decoded" method="onJWTDecoded" />
+        </service>
+        <!-- 响应监听服务 -->
+        <service id="jwt.listener.before_response" class="JWTAuthenticationBundle\EventListener\ResponseListener">
+            <argument>%kernel.charset%</argument>
+            <argument type="service" id="service_container"/>
+            <tag name="kernel.event_subscriber" event="kernel.response" method="onKernelResponse" />
+        </service>
+        <!-- 自定义加密方式 -->
+        <service id="jwt.encoder" class="JWTAuthenticationBundle\Encoder\JwtEncoder" />
+        <!-- 响应监听服务 -->
+        <service id="security.user.provider.concrete.jwt" class="JWTAuthenticationBundle\Providers\JWTUserProvider">
+            <argument type="service" id="doctrine"/>
+            <argument type="service" id="security.encoder_factory.generic"/>
+            <argument>%jwt.provider.class%</argument>
+            <argument>%jbp_jwt_authentication.user_identity_field%</argument>
+        </service>
+        <!-- 登陆后session处理 -->
+        <service id="security.context_listener" class="JWTAuthenticationBundle\EventListener\ContextListener">
+            <tag name="monolog.logger" channel="security" />
+            <argument type="service" id="security.token_storage" />
+            <argument type="collection" />
+            <argument /> <!-- Provider Key -->
+            <argument type="service" id="logger" on-invalid="null" />
+            <argument type="service" id="event_dispatcher" on-invalid="null" />
+            <argument type="service" id="security.authentication.trust_resolver" />
+        </service>
+        <!-- 自定义服务end -->
+    </services>
+
+</container>
