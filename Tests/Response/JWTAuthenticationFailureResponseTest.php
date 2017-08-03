@@ -13,12 +13,12 @@ final class JWTAuthenticationFailureResponseTest extends \PHPUnit_Framework_Test
     {
         $expected = [
             'code'    => 401,
-            'message' => 'message',
+            'msg' => 'message',
         ];
 
-        $response = new JWTAuthenticationFailureResponse($expected['message']);
+        $response = new JWTAuthenticationFailureResponse($expected['msg']);
 
-        $this->assertSame($expected['message'], $response->getMessage());
+        $this->assertSame($expected['msg'], $response->getMessage());
         $this->assertSame($expected['code'], $response->getStatusCode());
         $this->assertSame('Bearer', $response->headers->get('WWW-Authenticate'));
         $this->assertSame(json_encode($expected), $response->getContent());
@@ -38,6 +38,6 @@ final class JWTAuthenticationFailureResponseTest extends \PHPUnit_Framework_Test
 
         $this->assertSame($response->getStatusCode(), $responseBody->code);
         $this->assertSame($newMessage, $response->getMessage());
-        $this->assertSame($newMessage, $responseBody->message);
+        $this->assertSame($newMessage, $responseBody->msg);
     }
 }

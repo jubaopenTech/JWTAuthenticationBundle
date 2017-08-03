@@ -23,7 +23,7 @@ class JWTManagerTest extends \PHPUnit_Framework_TestCase
             ->method('dispatch')
             ->with(
                 $this->equalTo(Events::JWT_CREATED),
-                $this->isInstanceOf('JWTAuthenticationBundle\Event\JWTCreatedEvent')
+                $this->isInstanceOf('JubaopenTech\JWTAuthenticationBundle\Event\JWTCreatedEvent')
             );
 
         $dispatcher
@@ -31,7 +31,7 @@ class JWTManagerTest extends \PHPUnit_Framework_TestCase
             ->method('dispatch')
             ->with(
                 $this->equalTo(Events::JWT_ENCODED),
-                $this->isInstanceOf('JWTAuthenticationBundle\Event\JWTEncodedEvent')
+                $this->isInstanceOf('JubaopenTech\JWTAuthenticationBundle\Event\JWTEncodedEvent')
             );
 
         $encoder = $this->getJWTEncoderMock();
@@ -55,7 +55,7 @@ class JWTManagerTest extends \PHPUnit_Framework_TestCase
             ->method('dispatch')
             ->with(
                 $this->equalTo(Events::JWT_DECODED),
-                $this->isInstanceOf('JWTAuthenticationBundle\Event\JWTDecodedEvent')
+                $this->isInstanceOf('JubaopenTech\JWTAuthenticationBundle\Event\JWTDecodedEvent')
             );
 
         $encoder = $this->getJWTEncoderMock();
@@ -79,7 +79,7 @@ class JWTManagerTest extends \PHPUnit_Framework_TestCase
             ->method('dispatch')
             ->with(
                 $this->equalTo(Events::JWT_CREATED),
-                $this->isInstanceOf('JWTAuthenticationBundle\Event\JWTCreatedEvent')
+                $this->isInstanceOf('JubaopenTech\JWTAuthenticationBundle\Event\JWTCreatedEvent')
             );
 
         $dispatcher
@@ -87,7 +87,7 @@ class JWTManagerTest extends \PHPUnit_Framework_TestCase
             ->method('dispatch')
             ->with(
                 $this->equalTo(Events::JWT_ENCODED),
-                $this->isInstanceOf('JWTAuthenticationBundle\Event\JWTEncodedEvent')
+                $this->isInstanceOf('JubaopenTech\JWTAuthenticationBundle\Event\JWTEncodedEvent')
             );
 
         $encoder = $this->getJWTEncoderMock();
@@ -107,7 +107,7 @@ class JWTManagerTest extends \PHPUnit_Framework_TestCase
     protected function getJWTUserTokenMock()
     {
         $mock = $this
-            ->getMockBuilder('JWTAuthenticationBundle\Security\Authentication\Token\JWTUserToken')
+            ->getMockBuilder('JubaopenTech\JWTAuthenticationBundle\Security\Authentication\Token\JWTUserToken')
             ->disableOriginalConstructor()
             ->getMock();
 
@@ -125,7 +125,7 @@ class JWTManagerTest extends \PHPUnit_Framework_TestCase
     protected function getJWTEncoderMock()
     {
         return $this
-            ->getMockBuilder('JWTAuthenticationBundle\Encoder\JWTEncoderInterface')
+            ->getMockBuilder('JubaopenTech\JWTAuthenticationBundle\Encoder\JWTEncoderInterface')
             ->disableOriginalConstructor()
             ->getMock();
     }

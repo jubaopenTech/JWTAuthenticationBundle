@@ -27,7 +27,7 @@ class AuthenticationFailureHandlerTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('Symfony\Component\HttpFoundation\JsonResponse', $response);
         $this->assertEquals(401, $response->getStatusCode());
         $this->assertEquals(401, $content['code']);
-        $this->assertEquals('Bad credentials', $content['message']);
+        $this->assertEquals('Bad credentials', $content['msg']);
     }
 
     /**
