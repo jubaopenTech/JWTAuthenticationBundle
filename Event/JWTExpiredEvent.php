@@ -4,7 +4,7 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\Event;
+namespace JubaopenTech\JWTAuthenticationBundle\Event;
 
 /**
  * JWTExpiredEvent.

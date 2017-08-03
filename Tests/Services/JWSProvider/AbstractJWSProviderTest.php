@@ -1,9 +1,9 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Services\JWSProvider;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Services\JWSProvider;
 
-use JWTAuthenticationBundle\Signature\CreatedJWS;
-use JWTAuthenticationBundle\Signature\LoadedJWS;
+use JubaopenTech\JWTAuthenticationBundle\Signature\CreatedJWS;
+use JubaopenTech\JWTAuthenticationBundle\Signature\LoadedJWS;
 
 /**
  * Tests the JWSProvider.

@@ -1,24 +1,24 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Security\Guard;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Security\Guard;
 
-use JWTAuthenticationBundle\Event\JWTAuthenticatedEvent;
-use JWTAuthenticationBundle\Event\JWTInvalidEvent;
-use JWTAuthenticationBundle\Event\JWTNotFoundEvent;
-use JWTAuthenticationBundle\Events;
-use JWTAuthenticationBundle\Exception\ExpiredTokenException;
-use JWTAuthenticationBundle\Exception\InvalidPayloadException;
-use JWTAuthenticationBundle\Exception\InvalidTokenException;
-use JWTAuthenticationBundle\Exception\JWTDecodeFailureException;
-use JWTAuthenticationBundle\Exception\MissingTokenException;
-use JWTAuthenticationBundle\Exception\UserNotFoundException;
-use JWTAuthenticationBundle\Response\JWTAuthenticationFailureResponse;
-use JWTAuthenticationBundle\Security\Authentication\Token\JWTUserToken;
-use JWTAuthenticationBundle\Security\Authentication\Token\PreAuthenticationJWTUserToken;
-use JWTAuthenticationBundle\Security\Guard\JWTTokenAuthenticator;
-use JWTAuthenticationBundle\Services\JWTTokenManagerInterface;
-use JWTAuthenticationBundle\Tests\Stubs\User as AdvancedUserStub;
-use JWTAuthenticationBundle\TokenExtractor\TokenExtractorInterface;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTAuthenticatedEvent;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTInvalidEvent;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTNotFoundEvent;
+use JubaopenTech\JWTAuthenticationBundle\Events;
+use JubaopenTech\JWTAuthenticationBundle\Exception\ExpiredTokenException;
+use JubaopenTech\JWTAuthenticationBundle\Exception\InvalidPayloadException;
+use JubaopenTech\JWTAuthenticationBundle\Exception\InvalidTokenException;
+use JubaopenTech\JWTAuthenticationBundle\Exception\JWTDecodeFailureException;
+use JubaopenTech\JWTAuthenticationBundle\Exception\MissingTokenException;
+use JubaopenTech\JWTAuthenticationBundle\Exception\UserNotFoundException;
+use JubaopenTech\JWTAuthenticationBundle\Response\JWTAuthenticationFailureResponse;
+use JubaopenTech\JWTAuthenticationBundle\Security\Authentication\Token\JWTUserToken;
+use JubaopenTech\JWTAuthenticationBundle\Security\Authentication\Token\PreAuthenticationJWTUserToken;
+use JubaopenTech\JWTAuthenticationBundle\Security\Guard\JWTTokenAuthenticator;
+use JubaopenTech\JWTAuthenticationBundle\Services\JWTTokenManagerInterface;
+use JubaopenTech\JWTAuthenticationBundle\Tests\Stubs\User as AdvancedUserStub;
+use JubaopenTech\JWTAuthenticationBundle\TokenExtractor\TokenExtractorInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;

@@ -1,9 +1,9 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Services\JWSProvider;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Services\JWSProvider;
 
-use JWTAuthenticationBundle\Services\JWSProvider\LcobucciJWSProvider;
-use JWTAuthenticationBundle\Services\KeyLoader\RawKeyLoader;
+use JubaopenTech\JWTAuthenticationBundle\Services\JWSProvider\LcobucciJWSProvider;
+use JubaopenTech\JWTAuthenticationBundle\Services\KeyLoader\RawKeyLoader;
 
 /**
  * Tests the LcobucciJWSProvider.

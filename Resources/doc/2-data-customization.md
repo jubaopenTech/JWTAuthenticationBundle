@@ -37,7 +37,7 @@ services:
 ``` php
 // src/AppBundle/EventListener/JWTCreatedListener.php
 
-use JWTAuthenticationBundle\Event\JWTCreatedEvent;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTCreatedEvent;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
@@ -74,7 +74,7 @@ public function onJWTCreated(JWTCreatedEvent $event)
 ``` php
 // src/AppBundle/EventListener/JWTCreatedListener.php
 
-use JWTAuthenticationBundle\Event\JWTCreatedEvent;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTCreatedEvent;
 
 /**
  * @param JWTCreatedEvent $event
@@ -113,7 +113,7 @@ services:
 ``` php
 // src/AppBundle/EventListener/JWTDecodedListener.php
 
-use JWTAuthenticationBundle\Event\JWTDecodedEvent;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTDecodedEvent;
 
 /**
  * @param JWTDecodedEvent $event
@@ -151,7 +151,7 @@ services:
 ``` php
 // src/AppBundle/EventListener/JWTAuthenticatedListener.php
 
-use JWTAuthenticationBundle\Event\JWTAuthenticatedEvent;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTAuthenticatedEvent;
 
 /**
  * @param JWTAuthenticatedEvent $event
@@ -186,7 +186,7 @@ services:
 ``` php
 // src/AppBundle/EventListener/AuthenticationSuccessListener.php
 
-use JWTAuthenticationBundle\Event\AuthenticationSuccessEvent;
+use JubaopenTech\JWTAuthenticationBundle\Event\AuthenticationSuccessEvent;
 
 /**
  * @param AuthenticationSuccessEvent $event
@@ -218,7 +218,7 @@ You may need to get JWT after its creation.
 ``` php
 // src/AppBundle/EventListener/JWTEncodedListener.php
 
-use JWTAuthenticationBundle\Event\JWTEncodedEvent;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTEncodedEvent;
 
 /**
  * @param JWTEncodedEvent $event
@@ -248,8 +248,8 @@ Example: Set a custom response on authentication failure
 ``` php
 // src/AppBundle/EventListener/AuthenticationFailureListener.php
 
-use JWTAuthenticationBundle\Event\AuthenticationFailureEvent;
-use JWTAuthenticationBundle\Response\JWTAuthenticationFailureResponse;
+use JubaopenTech\JWTAuthenticationBundle\Event\AuthenticationFailureEvent;
+use JubaopenTech\JWTAuthenticationBundle\Response\JWTAuthenticationFailureResponse;
 
 /**
  * @param AuthenticationFailureEvent $event
@@ -286,8 +286,8 @@ services:
 ``` php
 // src/AppBundle/EventListener/JWTInvalidListener.php
 
-use JWTAuthenticationBundle\Event\JWTInvalidEvent;
-use JWTAuthenticationBundle\Response\JWTAuthenticationFailureResponse;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTInvalidEvent;
+use JubaopenTech\JWTAuthenticationBundle\Response\JWTAuthenticationFailureResponse;
 
 /**
  * @param JWTInvalidEvent $event
@@ -320,7 +320,7 @@ services:
 ``` php
 // src/AppBundle/EventListener/JWTNotFoundListener.php
 
-use JWTAuthenticationBundle\Event\JWTNotFoundEvent;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTNotFoundEvent;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 /**
@@ -359,8 +359,8 @@ services:
 ``` php
 // src/AppBundle/EventListener/JWTExpiredListener.php
 
-use JWTAuthenticationBundle\Event\JWTExpiredEvent;
-use JWTAuthenticationBundle\Response\JWTAuthenticationFailureResponse;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTExpiredEvent;
+use JubaopenTech\JWTAuthenticationBundle\Response\JWTAuthenticationFailureResponse;
 
 /**
  * @param JWTExpiredEvent $event

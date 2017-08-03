@@ -1,6 +1,6 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Functional\Bundle\Controller;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Functional\Bundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;

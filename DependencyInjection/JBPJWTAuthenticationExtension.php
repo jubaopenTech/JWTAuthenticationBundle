@@ -4,13 +4,13 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\DependencyInjection;
+namespace JubaopenTech\JWTAuthenticationBundle\DependencyInjection;
 
-use JWTAuthenticationBundle\Encoder\JWTEncoderInterface;
-use JWTAuthenticationBundle\Services\JWSProvider\JWSProviderInterface;
-use JWTAuthenticationBundle\Services\JWTManagerInterface;
-use JWTAuthenticationBundle\Services\JWTTokenManagerInterface;
-use JWTAuthenticationBundle\TokenExtractor\TokenExtractorInterface;
+use JubaopenTech\JWTAuthenticationBundle\Encoder\JWTEncoderInterface;
+use JubaopenTech\JWTAuthenticationBundle\Services\JWSProvider\JWSProviderInterface;
+use JubaopenTech\JWTAuthenticationBundle\Services\JWTManagerInterface;
+use JubaopenTech\JWTAuthenticationBundle\Services\JWTTokenManagerInterface;
+use JubaopenTech\JWTAuthenticationBundle\TokenExtractor\TokenExtractorInterface;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;

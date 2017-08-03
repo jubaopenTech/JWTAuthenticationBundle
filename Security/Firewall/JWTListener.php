@@ -4,15 +4,15 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\Security\Firewall;
+namespace JubaopenTech\JWTAuthenticationBundle\Security\Firewall;
 
-use JWTAuthenticationBundle\Event\JWTInvalidEvent;
-use JWTAuthenticationBundle\Event\JWTNotFoundEvent;
-use JWTAuthenticationBundle\Events;
-use JWTAuthenticationBundle\Response\JWTAuthenticationFailureResponse;
-use JWTAuthenticationBundle\Security\Authentication\Token\JWTUserToken;
-use JWTAuthenticationBundle\Security\Guard\JWTTokenAuthenticator;
-use JWTAuthenticationBundle\TokenExtractor\TokenExtractorInterface;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTInvalidEvent;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTNotFoundEvent;
+use JubaopenTech\JWTAuthenticationBundle\Events;
+use JubaopenTech\JWTAuthenticationBundle\Response\JWTAuthenticationFailureResponse;
+use JubaopenTech\JWTAuthenticationBundle\Security\Authentication\Token\JWTUserToken;
+use JubaopenTech\JWTAuthenticationBundle\Security\Guard\JWTTokenAuthenticator;
+use JubaopenTech\JWTAuthenticationBundle\TokenExtractor\TokenExtractorInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;

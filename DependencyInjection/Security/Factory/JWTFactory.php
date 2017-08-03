@@ -4,7 +4,7 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\DependencyInjection\Security\Factory;
+namespace JubaopenTech\JWTAuthenticationBundle\DependencyInjection\Security\Factory;
 
 use Symfony\Bundle\SecurityBundle\DependencyInjection\Security\Factory\SecurityFactoryInterface;
 use Symfony\Component\Config\Definition\Builder\NodeDefinition;

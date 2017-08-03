@@ -13,7 +13,7 @@ Create the authenticator class extending the built-in one:
 ```php
 namespace AppBundle\Security\Guard;
 
-use JWTAuthenticationBundle\Security\Guard\JWTTokenAuthenticator as BaseAuthenticator;
+use JubaopenTech\JWTAuthenticationBundle\Security\Guard\JWTTokenAuthenticator as BaseAuthenticator;
 
 class JWTTokenAuthenticator extends BaseAuthenticator
 {
@@ -60,8 +60,8 @@ If your application contains multiple firewalls with different security contexts
 ```php
 namespace AppBundle\Security\Guard;
 
-use JWTAuthenticationBundle\Security\Guard\JWTTokenAuthenticator as BaseAuthenticator;
-use JWTAuthenticationBundle\TokenExtractor;
+use JubaopenTech\JWTAuthenticationBundle\Security\Guard\JWTTokenAuthenticator as BaseAuthenticator;
+use JubaopenTech\JWTAuthenticationBundle\TokenExtractor;
 
 class JWTTokenAuthenticator extends BaseAuthenticator
 {

@@ -11,7 +11,7 @@ security:
                         roles: ROLE_USER
         jwt:
             jbp_jwt:
-                class: JWTAuthenticationBundle\Tests\Stubs\JWTUser
+                class: JubaopenTech\JWTAuthenticationBundle\Tests\Stubs\JWTUser
 
     access_control:
         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }

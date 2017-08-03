@@ -4,7 +4,7 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\Security\User;
+namespace JubaopenTech\JWTAuthenticationBundle\Security\User;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Functional;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Functional;
 
-use JWTAuthenticationBundle\Security\User\JWTUser;
+use JubaopenTech\JWTAuthenticationBundle\Security\User\JWTUser;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Core\User\User;
 

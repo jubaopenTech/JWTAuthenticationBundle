@@ -4,11 +4,11 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\Security\Http\Authentication;
+namespace JubaopenTech\JWTAuthenticationBundle\Security\Http\Authentication;
 
-use JWTAuthenticationBundle\Event\AuthenticationFailureEvent;
-use JWTAuthenticationBundle\Events;
-use JWTAuthenticationBundle\Response\JWTAuthenticationFailureResponse;
+use JubaopenTech\JWTAuthenticationBundle\Event\AuthenticationFailureEvent;
+use JubaopenTech\JWTAuthenticationBundle\Events;
+use JubaopenTech\JWTAuthenticationBundle\Response\JWTAuthenticationFailureResponse;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;

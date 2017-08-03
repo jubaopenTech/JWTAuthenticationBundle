@@ -4,10 +4,10 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\Security\Http\EntryPoint;
+namespace JubaopenTech\JWTAuthenticationBundle\Security\Http\EntryPoint;
 
-use JWTAuthenticationBundle\Response\JWTAuthenticationFailureResponse;
-use JWTAuthenticationBundle\Security\Guard\JWTTokenAuthenticator;
+use JubaopenTech\JWTAuthenticationBundle\Response\JWTAuthenticationFailureResponse;
+use JubaopenTech\JWTAuthenticationBundle\Security\Guard\JWTTokenAuthenticator;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 use Symfony\Component\Security\Http\EntryPoint\AuthenticationEntryPointInterface;

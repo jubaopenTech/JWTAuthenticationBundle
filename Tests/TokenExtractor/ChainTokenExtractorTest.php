@@ -1,9 +1,9 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\TokenExtractor;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\TokenExtractor;
 
-use JWTAuthenticationBundle\TokenExtractor\ChainTokenExtractor;
-use JWTAuthenticationBundle\TokenExtractor\TokenExtractorInterface;
+use JubaopenTech\JWTAuthenticationBundle\TokenExtractor\ChainTokenExtractor;
+use JubaopenTech\JWTAuthenticationBundle\TokenExtractor\TokenExtractorInterface;
 use Symfony\Component\HttpFoundation\Request;
 
 /**

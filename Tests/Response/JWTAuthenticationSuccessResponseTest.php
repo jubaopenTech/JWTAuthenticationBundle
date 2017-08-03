@@ -1,8 +1,8 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Response;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Response;
 
-use JWTAuthenticationBundle\Response\JWTAuthenticationSuccessResponse;
+use JubaopenTech\JWTAuthenticationBundle\Response\JWTAuthenticationSuccessResponse;
 
 /**
  * Tests the JWTAuthenticationSuccessResponse.

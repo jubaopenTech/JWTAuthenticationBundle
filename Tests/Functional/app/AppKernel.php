@@ -1,6 +1,6 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Functional;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Functional;
 
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\HttpKernel\Kernel;
@@ -30,8 +30,8 @@ class AppKernel extends Kernel
             new \Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new \Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new \Symfony\Bundle\SecurityBundle\SecurityBundle(),
-            new \JWTAuthenticationBundle\JBPJWTAuthenticationBundle(),
-            new \JWTAuthenticationBundle\Tests\Functional\Bundle\Bundle(),
+            new \JubaopenTech\JWTAuthenticationBundle\JBPJWTAuthenticationBundle(),
+            new \JubaopenTech\JWTAuthenticationBundle\Tests\Functional\Bundle\Bundle(),
         ];
     }
 

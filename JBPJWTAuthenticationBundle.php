@@ -4,10 +4,10 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle;
+namespace JubaopenTech\JWTAuthenticationBundle;
 
-use JWTAuthenticationBundle\DependencyInjection\Security\Factory\JWTFactory;
-use JWTAuthenticationBundle\DependencyInjection\Security\Factory\JWTUserFactory;
+use JubaopenTech\JWTAuthenticationBundle\DependencyInjection\Security\Factory\JWTFactory;
+use JubaopenTech\JWTAuthenticationBundle\DependencyInjection\Security\Factory\JWTUserFactory;
 use Symfony\Bundle\SecurityBundle\DependencyInjection\SecurityExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;

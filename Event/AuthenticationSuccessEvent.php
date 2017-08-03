@@ -4,7 +4,7 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\Event;
+namespace JubaopenTech\JWTAuthenticationBundle\Event;
 
 use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\HttpFoundation\Response;

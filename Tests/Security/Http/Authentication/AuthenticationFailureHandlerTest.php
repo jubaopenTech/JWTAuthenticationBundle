@@ -1,8 +1,8 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Security\Http\Authentication;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Security\Http\Authentication;
 
-use JWTAuthenticationBundle\Security\Http\Authentication\AuthenticationFailureHandler;
+use JubaopenTech\JWTAuthenticationBundle\Security\Http\Authentication\AuthenticationFailureHandler;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 
 /**

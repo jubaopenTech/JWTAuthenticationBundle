@@ -4,7 +4,7 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\Services;
+namespace JubaopenTech\JWTAuthenticationBundle\Services;
 
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\User\UserInterface;

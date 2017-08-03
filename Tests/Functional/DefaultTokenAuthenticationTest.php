@@ -1,6 +1,6 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Functional;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Functional;
 
 /**
  * Tests the built-in authentication response mechanism.

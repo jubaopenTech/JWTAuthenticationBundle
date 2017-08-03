@@ -4,14 +4,14 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\Security\Authentication\Provider;
+namespace JubaopenTech\JWTAuthenticationBundle\Security\Authentication\Provider;
 
-use JWTAuthenticationBundle\Event\JWTAuthenticatedEvent;
-use JWTAuthenticationBundle\Events;
-use JWTAuthenticationBundle\Exception\JWTDecodeFailureException;
-use JWTAuthenticationBundle\Security\Authentication\Token\JWTUserToken;
-use JWTAuthenticationBundle\Security\Guard\JWTTokenAuthenticator;
-use JWTAuthenticationBundle\Services\JWTManagerInterface;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTAuthenticatedEvent;
+use JubaopenTech\JWTAuthenticationBundle\Events;
+use JubaopenTech\JWTAuthenticationBundle\Exception\JWTDecodeFailureException;
+use JubaopenTech\JWTAuthenticationBundle\Security\Authentication\Token\JWTUserToken;
+use JubaopenTech\JWTAuthenticationBundle\Security\Guard\JWTTokenAuthenticator;
+use JubaopenTech\JWTAuthenticationBundle\Services\JWTManagerInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\Security\Core\Authentication\Provider\AuthenticationProviderInterface;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;

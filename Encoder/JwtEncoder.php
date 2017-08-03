@@ -4,7 +4,7 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\Encoder;
+namespace JubaopenTech\JWTAuthenticationBundle\Encoder;
 
 use Symfony\Component\Security\Core\Encoder\BasePasswordEncoder;
 

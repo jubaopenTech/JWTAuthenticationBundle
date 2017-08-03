@@ -10,4 +10,4 @@ jbpjwt_authentication:
 
 services:
     app.dummy_encoder:
-        class: JWTAuthenticationBundle\Tests\Functional\DependencyInjection\DummyEncoder
+        class: JubaopenTech\JWTAuthenticationBundle\Tests\Functional\DependencyInjection\DummyEncoder

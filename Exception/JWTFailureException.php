@@ -4,7 +4,7 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\Exception;
+namespace JubaopenTech\JWTAuthenticationBundle\Exception;
 
 /**
  * Base class for exceptions thrown during JWT creation/loading.

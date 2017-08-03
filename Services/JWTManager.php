@@ -4,13 +4,13 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\Services;
+namespace JubaopenTech\JWTAuthenticationBundle\Services;
 
-use JWTAuthenticationBundle\Encoder\JWTEncoderInterface;
-use JWTAuthenticationBundle\Event\JWTCreatedEvent;
-use JWTAuthenticationBundle\Event\JWTDecodedEvent;
-use JWTAuthenticationBundle\Event\JWTEncodedEvent;
-use JWTAuthenticationBundle\Events;
+use JubaopenTech\JWTAuthenticationBundle\Encoder\JWTEncoderInterface;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTCreatedEvent;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTDecodedEvent;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTEncodedEvent;
+use JubaopenTech\JWTAuthenticationBundle\Events;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\PropertyAccess\PropertyAccess;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;

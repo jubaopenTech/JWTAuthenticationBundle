@@ -4,7 +4,7 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\Services\KeyLoader;
+namespace JubaopenTech\JWTAuthenticationBundle\Services\KeyLoader;
 
 /**
  * Interface for classes that are able to load crypto keys.

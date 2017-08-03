@@ -1,6 +1,6 @@
 <?php
 
-namespace JWTAuthenticationBundle\Security\User;
+namespace JubaopenTech\JWTAuthenticationBundle\Security\User;
 
 /**
  * User class for which to create instances from JWT tokens.

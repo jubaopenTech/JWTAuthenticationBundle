@@ -1,15 +1,15 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Functional\Utils;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Functional\Utils;
 
-use JWTAuthenticationBundle\Event\JWTAuthenticatedEvent;
-use JWTAuthenticationBundle\Event\JWTCreatedEvent;
-use JWTAuthenticationBundle\Event\JWTDecodedEvent;
-use JWTAuthenticationBundle\Event\JWTEncodedEvent;
-use JWTAuthenticationBundle\Event\JWTExpiredEvent;
-use JWTAuthenticationBundle\Event\JWTInvalidEvent;
-use JWTAuthenticationBundle\Event\JWTNotFoundEvent;
-use JWTAuthenticationBundle\Events;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTAuthenticatedEvent;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTCreatedEvent;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTDecodedEvent;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTEncodedEvent;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTExpiredEvent;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTInvalidEvent;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTNotFoundEvent;
+use JubaopenTech\JWTAuthenticationBundle\Events;
 use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 

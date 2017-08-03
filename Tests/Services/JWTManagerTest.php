@@ -2,9 +2,9 @@
 
 namespace Services;
 
-use JWTAuthenticationBundle\Events;
-use JWTAuthenticationBundle\Services\JWTManager;
-use JWTAuthenticationBundle\Tests\Stubs\User as CustomUser;
+use JubaopenTech\JWTAuthenticationBundle\Events;
+use JubaopenTech\JWTAuthenticationBundle\Services\JWTManager;
+use JubaopenTech\JWTAuthenticationBundle\Tests\Stubs\User as CustomUser;
 use Symfony\Component\Security\Core\User\User;
 
 /**

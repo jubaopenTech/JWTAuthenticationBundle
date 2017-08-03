@@ -1,12 +1,12 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Stubs;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Stubs;
 
-use JWTAuthenticationBundle\Encoder\JWTEncoderInterface;
-use JWTAuthenticationBundle\Services\JWSProvider\JWSProviderInterface;
-use JWTAuthenticationBundle\Services\JWTManager;
-use JWTAuthenticationBundle\Services\JWTTokenManagerInterface;
-use JWTAuthenticationBundle\TokenExtractor\TokenExtractorInterface;
+use JubaopenTech\JWTAuthenticationBundle\Encoder\JWTEncoderInterface;
+use JubaopenTech\JWTAuthenticationBundle\Services\JWSProvider\JWSProviderInterface;
+use JubaopenTech\JWTAuthenticationBundle\Services\JWTManager;
+use JubaopenTech\JWTAuthenticationBundle\Services\JWTTokenManagerInterface;
+use JubaopenTech\JWTAuthenticationBundle\TokenExtractor\TokenExtractorInterface;
 
 class Autowired
 {

@@ -31,10 +31,8 @@
         "friendsofphp/php-cs-fixer": "^1.1",
         "lcobucci/jwt": "~3.2"
     },
-    "suggest": {
-    },
     "autoload": {
-        "psr-4": { "JWTAuthenticationBundle\\": "" },
+        "psr-4": { "JubaopenTech\\JWTAuthenticationBundle\\": "" },
         "exclude-from-classmap": [
             "/Tests/"
         ]

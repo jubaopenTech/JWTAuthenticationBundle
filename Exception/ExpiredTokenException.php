@@ -4,9 +4,9 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\Exception;
+namespace JubaopenTech\JWTAuthenticationBundle\Exception;
 
-use JWTAuthenticationBundle\Security\Guard\JWTTokenAuthenticator;
+use JubaopenTech\JWTAuthenticationBundle\Security\Guard\JWTTokenAuthenticator;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 
 /**

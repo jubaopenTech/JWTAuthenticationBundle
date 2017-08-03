@@ -4,7 +4,7 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle;
+namespace JubaopenTech\JWTAuthenticationBundle;
 
 /**
  * Events.

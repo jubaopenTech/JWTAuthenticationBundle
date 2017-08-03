@@ -1,6 +1,6 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Functional\Bundle\DependencyInjection;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Functional\Bundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;

@@ -11,10 +11,10 @@ This bundle requires Symfony 2.8+ (and the OpenSSL library if you intend to use 
 Installation
 ------------
 
-Add [`lexik/jwt-authentication-bundle`](https://packagist.org/packages/lexik/jwt-authentication-bundle)
+Add [`jubaopen/jwt-authentication-bundle`](https://packagist.org/packages/jubaopen/jwt-authentication-bundle)
 to your `composer.json` file:
 
-    php composer.phar require "lexik/jwt-authentication-bundle"
+    php composer.phar require "jubaopen/jwt-authentication-bundle"
 
 Register the bundle in `app/AppKernel.php`:
 
@@ -23,7 +23,7 @@ public function registerBundles()
 {
     return array(
         // ...
-        new JWTAuthenticationBundle\LexikJWTAuthenticationBundle(),
+        new JubaopenTech\JWTAuthenticationBundle\JBPJWTAuthenticationBundle(),
     );
 }
 ```

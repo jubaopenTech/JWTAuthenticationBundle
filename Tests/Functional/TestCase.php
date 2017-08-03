@@ -1,6 +1,6 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Functional;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Functional;
 
 use Symfony\Bundle\FrameworkBundle\Client;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;

@@ -13,8 +13,8 @@ Creating your own encoder
 // src/AppBundle/Encoder/NixillaJWTEncoder.php
 namespace AppBundle\Encoder;
 
-use JWT\Authentication\JWT;
-use JWTAuthenticationBundle\Encoder\JWTEncoderInterface;
+use JubaopenTech\JWT\Authentication\JWT;
+use JubaopenTech\JWTAuthenticationBundle\Encoder\JWTEncoderInterface;
 
 /**
  * NixillaJWTEncoder

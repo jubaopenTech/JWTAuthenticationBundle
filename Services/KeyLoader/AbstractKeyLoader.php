@@ -4,7 +4,7 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\Services\KeyLoader;
+namespace JubaopenTech\JWTAuthenticationBundle\Services\KeyLoader;
 
 /**
  * Abstract class for key loaders.

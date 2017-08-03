@@ -4,16 +4,16 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\Services\JWSProvider;
+namespace JubaopenTech\JWTAuthenticationBundle\Services\JWSProvider;
 
 use Lcobucci\JWT\Builder;
 use Lcobucci\JWT\Parser;
 use Lcobucci\JWT\Signer;
 use Lcobucci\JWT\Signer\Key;
 use Lcobucci\JWT\ValidationData;
-use JWTAuthenticationBundle\Services\KeyLoader\RawKeyLoader;
-use JWTAuthenticationBundle\Signature\CreatedJWS;
-use JWTAuthenticationBundle\Signature\LoadedJWS;
+use JubaopenTech\JWTAuthenticationBundle\Services\KeyLoader\RawKeyLoader;
+use JubaopenTech\JWTAuthenticationBundle\Signature\CreatedJWS;
+use JubaopenTech\JWTAuthenticationBundle\Signature\LoadedJWS;
 
 /**
  * @final

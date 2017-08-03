@@ -1,8 +1,8 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Signature;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Signature;
 
-use JWTAuthenticationBundle\Signature\LoadedJWS;
+use JubaopenTech\JWTAuthenticationBundle\Signature\LoadedJWS;
 
 /**
  * Tests the CreatedJWS model class.
@@ -25,7 +25,7 @@ final class LoadedJWSTest extends \PHPUnit_Framework_TestCase
 
     public function testVerifiedWithEmptyPayload()
     {
-        $jws = new LoadedJWS($payload = [], true);
+        $jws = new LoadedJWS($payload = [],100, true);
 
         $this->assertSame($payload, $jws->getPayload());
         $this->assertFalse($jws->isVerified());
@@ -34,7 +34,7 @@ final class LoadedJWSTest extends \PHPUnit_Framework_TestCase
 
     public function testUnverifiedWithGoodPayload()
     {
-        $jws = new LoadedJWS($this->goodPayload, false);
+        $jws = new LoadedJWS($this->goodPayload,100, false);
 
         $this->assertSame($this->goodPayload, $jws->getPayload());
         $this->assertFalse($jws->isExpired());
@@ -43,7 +43,7 @@ final class LoadedJWSTest extends \PHPUnit_Framework_TestCase
 
     public function testVerifiedWithGoodPayload()
     {
-        $jws = new LoadedJWS($this->goodPayload, true);
+        $jws = new LoadedJWS($this->goodPayload,100, true);
 
         $this->assertSame($this->goodPayload, $jws->getPayload());
         $this->assertFalse($jws->isExpired());
@@ -55,7 +55,7 @@ final class LoadedJWSTest extends \PHPUnit_Framework_TestCase
         $payload = $this->goodPayload;
         $payload['exp'] -= 3600;
 
-        $jws = new LoadedJWS($payload, true);
+        $jws = new LoadedJWS($payload,100, true);
 
         $this->assertFalse($jws->isVerified());
         $this->assertTrue($jws->isExpired());
@@ -66,7 +66,7 @@ final class LoadedJWSTest extends \PHPUnit_Framework_TestCase
         $payload = $this->goodPayload;
         $payload['iat'] += 3600;
 
-        $jws = new LoadedJWS($payload, true);
+        $jws = new LoadedJWS($payload,100, true);
 
         $this->assertFalse($jws->isVerified());
         $this->assertFalse($jws->isExpired());

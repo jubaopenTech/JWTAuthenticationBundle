@@ -4,7 +4,7 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\Encoder;
+namespace JubaopenTech\JWTAuthenticationBundle\Encoder;
 
 /**
  * Json Web Token encoder/decoder based on the lcobucci/jwt library.

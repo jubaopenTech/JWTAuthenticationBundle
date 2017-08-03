@@ -4,9 +4,9 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\DependencyInjection\Security\Factory;
+namespace JubaopenTech\JWTAuthenticationBundle\DependencyInjection\Security\Factory;
 
-use JWTAuthenticationBundle\Security\User\JWTUserInterface;
+use JubaopenTech\JWTAuthenticationBundle\Security\User\JWTUserInterface;
 use Symfony\Bundle\SecurityBundle\DependencyInjection\Security\UserProvider\UserProviderFactoryInterface;
 use Symfony\Component\Config\Definition\Builder\NodeDefinition;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

@@ -1,10 +1,10 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Security\User;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Security\User;
 
-use JWTAuthenticationBundle\Security\User\JWTUser;
-use JWTAuthenticationBundle\Security\User\JWTUserInterface;
-use JWTAuthenticationBundle\Security\User\JWTUserProvider;
+use JubaopenTech\JWTAuthenticationBundle\Security\User\JWTUser;
+use JubaopenTech\JWTAuthenticationBundle\Security\User\JWTUserInterface;
+use JubaopenTech\JWTAuthenticationBundle\Security\User\JWTUserProvider;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**

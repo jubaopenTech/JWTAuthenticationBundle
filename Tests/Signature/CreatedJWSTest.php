@@ -1,8 +1,8 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Signature;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Signature;
 
-use JWTAuthenticationBundle\Signature\CreatedJWS;
+use JubaopenTech\JWTAuthenticationBundle\Signature\CreatedJWS;
 
 /**
  * Tests the CreatedJWS model class.

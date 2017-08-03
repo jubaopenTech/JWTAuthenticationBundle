@@ -4,7 +4,7 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\Exception;
+namespace JubaopenTech\JWTAuthenticationBundle\Exception;
 
 /**
  * JWTDecodeFailureException is thrown if an error occurs in the token decoding process.

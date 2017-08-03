@@ -1,8 +1,8 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Security\Http\EntryPoint;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Security\Http\EntryPoint;
 
-use JWTAuthenticationBundle\Security\Http\EntryPoint\JWTEntryPoint;
+use JubaopenTech\JWTAuthenticationBundle\Security\Http\EntryPoint\JWTEntryPoint;
 
 /**
  * JWTEntryPointTest.

@@ -4,7 +4,7 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\Exception;
+namespace JubaopenTech\JWTAuthenticationBundle\Exception;
 
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 

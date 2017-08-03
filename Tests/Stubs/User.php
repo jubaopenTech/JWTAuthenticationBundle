@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace JWTAuthenticationBundle\Tests\Stubs;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Stubs;
 
 use Symfony\Component\Security\Core\User\AdvancedUserInterface;
 

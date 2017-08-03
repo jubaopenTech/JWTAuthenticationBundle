@@ -1,9 +1,9 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Services\JWSProvider;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Services\JWSProvider;
 
-use JWTAuthenticationBundle\Services\JWSProvider\DefaultJWSProvider;
-use JWTAuthenticationBundle\Services\KeyLoader\KeyLoaderInterface;
+use JubaopenTech\JWTAuthenticationBundle\Services\JWSProvider\DefaultJWSProvider;
+use JubaopenTech\JWTAuthenticationBundle\Services\KeyLoader\KeyLoaderInterface;
 
 /**
  * Tests the DefaultJWSProvider.

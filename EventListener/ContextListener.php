@@ -3,7 +3,7 @@
  * @author: zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\EventListener;
+namespace JubaopenTech\JWTAuthenticationBundle\EventListener;
 
 use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;

@@ -4,12 +4,12 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\Security\Http\Authentication;
+namespace JubaopenTech\JWTAuthenticationBundle\Security\Http\Authentication;
 
-use JWTAuthenticationBundle\Event\AuthenticationSuccessEvent;
-use JWTAuthenticationBundle\Events;
-use JWTAuthenticationBundle\Response\JWTAuthenticationSuccessResponse;
-use JWTAuthenticationBundle\Services\JWTManager;
+use JubaopenTech\JWTAuthenticationBundle\Event\AuthenticationSuccessEvent;
+use JubaopenTech\JWTAuthenticationBundle\Events;
+use JubaopenTech\JWTAuthenticationBundle\Response\JWTAuthenticationSuccessResponse;
+use JubaopenTech\JWTAuthenticationBundle\Services\JWTManager;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;

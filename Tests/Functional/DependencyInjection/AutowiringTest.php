@@ -1,14 +1,14 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Functional\DependencyInjection;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Functional\DependencyInjection;
 
-use JWTAuthenticationBundle\DependencyInjection\JBPJWTAuthenticationExtension;
-use JWTAuthenticationBundle\Encoder\DefaultEncoder;
-use JWTAuthenticationBundle\JBPJWTAuthenticationBundle;
-use JWTAuthenticationBundle\Services\JWSProvider\DefaultJWSProvider;
-use JWTAuthenticationBundle\Services\JWTManager;
-use JWTAuthenticationBundle\Tests\Stubs\Autowired;
-use JWTAuthenticationBundle\TokenExtractor\ChainTokenExtractor;
+use JubaopenTech\JWTAuthenticationBundle\DependencyInjection\JBPJWTAuthenticationExtension;
+use JubaopenTech\JWTAuthenticationBundle\Encoder\DefaultEncoder;
+use JubaopenTech\JWTAuthenticationBundle\JBPJWTAuthenticationBundle;
+use JubaopenTech\JWTAuthenticationBundle\Services\JWSProvider\DefaultJWSProvider;
+use JubaopenTech\JWTAuthenticationBundle\Services\JWTManager;
+use JubaopenTech\JWTAuthenticationBundle\Tests\Stubs\Autowired;
+use JubaopenTech\JWTAuthenticationBundle\TokenExtractor\ChainTokenExtractor;
 use Symfony\Bundle\FrameworkBundle\DependencyInjection\FrameworkExtension;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\SecurityBundle\DependencyInjection\SecurityExtension;

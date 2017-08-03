@@ -4,11 +4,11 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\Services\JWSProvider;
+namespace JubaopenTech\JWTAuthenticationBundle\Services\JWSProvider;
 
-use JWTAuthenticationBundle\Services\KeyLoader\KeyLoaderInterface;
-use JWTAuthenticationBundle\Signature\CreatedJWS;
-use JWTAuthenticationBundle\Signature\LoadedJWS;
+use JubaopenTech\JWTAuthenticationBundle\Services\KeyLoader\KeyLoaderInterface;
+use JubaopenTech\JWTAuthenticationBundle\Signature\CreatedJWS;
+use JubaopenTech\JWTAuthenticationBundle\Signature\LoadedJWS;
 use Namshi\JOSE\JWS;
 
 /**

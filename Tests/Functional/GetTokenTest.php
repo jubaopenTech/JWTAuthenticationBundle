@@ -1,10 +1,10 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Functional;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Functional;
 
-use JWTAuthenticationBundle\Event\JWTCreatedEvent;
-use JWTAuthenticationBundle\Events;
-use JWTAuthenticationBundle\Response\JWTAuthenticationSuccessResponse;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTCreatedEvent;
+use JubaopenTech\JWTAuthenticationBundle\Events;
+use JubaopenTech\JWTAuthenticationBundle\Response\JWTAuthenticationSuccessResponse;
 
 class GetTokenTest extends TestCase
 {

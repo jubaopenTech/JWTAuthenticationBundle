@@ -4,7 +4,7 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\Response;
+namespace JubaopenTech\JWTAuthenticationBundle\Response;
 
 use Symfony\Component\HttpFoundation\JsonResponse;
 

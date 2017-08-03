@@ -1,13 +1,13 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Functional;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Functional;
 
-use JWTAuthenticationBundle\Event\JWTDecodedEvent;
-use JWTAuthenticationBundle\Event\JWTExpiredEvent;
-use JWTAuthenticationBundle\Event\JWTInvalidEvent;
-use JWTAuthenticationBundle\Event\JWTNotFoundEvent;
-use JWTAuthenticationBundle\Events;
-use JWTAuthenticationBundle\Response\JWTAuthenticationFailureResponse;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTDecodedEvent;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTExpiredEvent;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTInvalidEvent;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTNotFoundEvent;
+use JubaopenTech\JWTAuthenticationBundle\Events;
+use JubaopenTech\JWTAuthenticationBundle\Response\JWTAuthenticationFailureResponse;
 
 /**
  * Tests the overriding authentication response mechanism.

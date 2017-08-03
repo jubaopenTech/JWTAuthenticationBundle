@@ -4,7 +4,7 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\Security\Authentication\Token;
+namespace JubaopenTech\JWTAuthenticationBundle\Security\Authentication\Token;
 
 use Symfony\Component\Security\Guard\Token\PreAuthenticationGuardToken;
 

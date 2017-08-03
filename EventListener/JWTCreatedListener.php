@@ -2,8 +2,8 @@
 /**
  * @author: zhaozhuobin
  */
-namespace JWTAuthenticationBundle\EventListener;
-use JWTAuthenticationBundle\Event\JWTCreatedEvent;
+namespace JubaopenTech\JWTAuthenticationBundle\EventListener;
+use JubaopenTech\JWTAuthenticationBundle\Event\JWTCreatedEvent;
 use Symfony\Component\HttpFoundation\RequestStack;
 /**
  * MemberRepository

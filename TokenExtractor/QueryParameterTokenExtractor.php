@@ -4,7 +4,7 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\TokenExtractor;
+namespace JubaopenTech\JWTAuthenticationBundle\TokenExtractor;
 
 use Symfony\Component\HttpFoundation\Request;
 

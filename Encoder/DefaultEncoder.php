@@ -4,12 +4,12 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\Encoder;
+namespace JubaopenTech\JWTAuthenticationBundle\Encoder;
 
-use JWTAuthenticationBundle\Exception\JWTDecodeFailureException;
-use JWTAuthenticationBundle\Exception\JWTEncodeFailureException;
-use JWTAuthenticationBundle\Services\JWSProvider\JWSProviderInterface;
-use JWTAuthenticationBundle\Signature\LoadedJWS;
+use JubaopenTech\JWTAuthenticationBundle\Exception\JWTDecodeFailureException;
+use JubaopenTech\JWTAuthenticationBundle\Exception\JWTEncodeFailureException;
+use JubaopenTech\JWTAuthenticationBundle\Services\JWSProvider\JWSProviderInterface;
+use JubaopenTech\JWTAuthenticationBundle\Signature\LoadedJWS;
 
 /**
  * Default Json Web Token encoder/decoder.

@@ -1,8 +1,8 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Services\KeyLoader;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Services\KeyLoader;
 
-use JWTAuthenticationBundle\Services\KeyLoader\OpenSSLKeyLoader;
+use JubaopenTech\JWTAuthenticationBundle\Services\KeyLoader\OpenSSLKeyLoader;
 
 /**
  * OpenSSLKeyLoaderTest.

@@ -4,9 +4,9 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\EventListener;
+namespace JubaopenTech\JWTAuthenticationBundle\EventListener;
 
-use JWTAuthenticationBundle\Signature\LoadedJWS;
+use JubaopenTech\JWTAuthenticationBundle\Signature\LoadedJWS;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;

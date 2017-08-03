@@ -2,10 +2,10 @@
 /**
  * @author:zhaozhuobin
  */
-namespace JWTAuthenticationBundle\Providers;
+namespace JubaopenTech\JWTAuthenticationBundle\Providers;
 
 use Doctrine\Bundle\DoctrineBundle\Registry;
-use JWTAuthenticationBundle\Security\User\JWTUserInterface;
+use JubaopenTech\JWTAuthenticationBundle\Security\User\JWTUserInterface;
 use Symfony\Component\Security\Core\Encoder\EncoderFactory;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;

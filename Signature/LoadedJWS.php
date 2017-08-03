@@ -4,7 +4,7 @@
  * @author zhaozhuobin
  */
 
-namespace JWTAuthenticationBundle\Signature;
+namespace JubaopenTech\JWTAuthenticationBundle\Signature;
 
 /**
  * Object representation of a JSON Web Signature loaded from an

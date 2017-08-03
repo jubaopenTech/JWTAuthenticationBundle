@@ -1,9 +1,9 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Functional\Command;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Functional\Command;
 
-use JWTAuthenticationBundle\Command\CheckConfigCommand;
-use JWTAuthenticationBundle\Tests\Functional\TestCase;
+use JubaopenTech\JWTAuthenticationBundle\Command\CheckConfigCommand;
+use JubaopenTech\JWTAuthenticationBundle\Tests\Functional\TestCase;
 use Symfony\Component\Console\Tester\CommandTester;
 
 /**

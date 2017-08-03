@@ -1,10 +1,10 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Security\Http\Authentication;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Security\Http\Authentication;
 
-use JWTAuthenticationBundle\Events;
-use JWTAuthenticationBundle\Security\Http\Authentication\AuthenticationSuccessHandler;
-use JWTAuthenticationBundle\Services\JWTManager;
+use JubaopenTech\JWTAuthenticationBundle\Events;
+use JubaopenTech\JWTAuthenticationBundle\Security\Http\Authentication\AuthenticationSuccessHandler;
+use JubaopenTech\JWTAuthenticationBundle\Services\JWTManager;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
@@ -77,7 +77,7 @@ class AuthenticationSuccessHandlerTest extends \PHPUnit_Framework_TestCase
     protected function getToken()
     {
         $token = $this
-            ->getMockBuilder('JWTAuthenticationBundle\Security\Authentication\Token\JWTUserToken')
+            ->getMockBuilder('JubaopenTech\JWTAuthenticationBundle\Security\Authentication\Token\JWTUserToken')
             ->disableOriginalConstructor()
             ->getMock();
 
@@ -130,7 +130,7 @@ class AuthenticationSuccessHandlerTest extends \PHPUnit_Framework_TestCase
             ->method('dispatch')
             ->with(
                 $this->equalTo(Events::AUTHENTICATION_SUCCESS),
-                $this->isInstanceOf('JWTAuthenticationBundle\Event\AuthenticationSuccessEvent')
+                $this->isInstanceOf('JubaopenTech\JWTAuthenticationBundle\Event\AuthenticationSuccessEvent')
             );
 
         return $dispatcher;

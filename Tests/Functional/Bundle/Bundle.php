@@ -1,8 +1,8 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Functional\Bundle;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Functional\Bundle;
 
-use JWTAuthenticationBundle\Tests\Functional\Bundle\DependencyInjection\BundleExtension;
+use JubaopenTech\JWTAuthenticationBundle\Tests\Functional\Bundle\DependencyInjection\BundleExtension;
 use Symfony\Component\HttpKernel\Bundle\Bundle as BaseBundle;
 
 class Bundle extends BaseBundle

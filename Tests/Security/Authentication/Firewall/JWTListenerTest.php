@@ -1,10 +1,10 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Security\Authentication\Firewall;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Security\Authentication\Firewall;
 
-use JWTAuthenticationBundle\Events;
-use JWTAuthenticationBundle\Response\JWTAuthenticationFailureResponse;
-use JWTAuthenticationBundle\Security\Firewall\JWTListener;
+use JubaopenTech\JWTAuthenticationBundle\Events;
+use JubaopenTech\JWTAuthenticationBundle\Response\JWTAuthenticationFailureResponse;
+use JubaopenTech\JWTAuthenticationBundle\Security\Firewall\JWTListener;
 
 /**
  * JWTListenerTest.
@@ -31,7 +31,7 @@ class JWTListenerTest extends \PHPUnit_Framework_TestCase
             ->method('dispatch')
             ->with(
                 $this->equalTo(Events::JWT_NOT_FOUND),
-                $this->isInstanceOf('JWTAuthenticationBundle\Event\JWTNotFoundEvent')
+                $this->isInstanceOf('JubaopenTech\JWTAuthenticationBundle\Event\JWTNotFoundEvent')
             );
 
         $listener->setDispatcher($dispatcher);
@@ -67,7 +67,7 @@ class JWTListenerTest extends \PHPUnit_Framework_TestCase
             ->method('dispatch')
             ->with(
                 $this->equalTo(Events::JWT_INVALID),
-                $this->isInstanceOf('JWTAuthenticationBundle\Event\JWTInvalidEvent')
+                $this->isInstanceOf('JubaopenTech\JWTAuthenticationBundle\Event\JWTInvalidEvent')
             );
         $listener->setDispatcher($dispatcher);
         $listener->addTokenExtractor($this->getAuthorizationHeaderTokenExtractorMock('token'));
@@ -117,7 +117,7 @@ class JWTListenerTest extends \PHPUnit_Framework_TestCase
     protected function getAuthorizationHeaderTokenExtractorMock($returnValue)
     {
         $extractor = $this
-            ->getMockBuilder('JWTAuthenticationBundle\TokenExtractor\AuthorizationHeaderTokenExtractor')
+            ->getMockBuilder('JubaopenTech\JWTAuthenticationBundle\TokenExtractor\AuthorizationHeaderTokenExtractor')
             ->disableOriginalConstructor()
             ->getMock();
 

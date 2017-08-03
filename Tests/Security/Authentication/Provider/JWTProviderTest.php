@@ -1,8 +1,8 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Security\Authentication\Provider;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Security\Authentication\Provider;
 
-use JWTAuthenticationBundle\Security\Authentication\Provider\JWTProvider;
+use JubaopenTech\JWTAuthenticationBundle\Security\Authentication\Provider\JWTProvider;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 
@@ -28,7 +28,7 @@ class JWTProviderTest extends \PHPUnit_Framework_TestCase
 
         /** @var TokenInterface $jwtUserToken */
         $jwtUserToken = $this
-            ->getMockBuilder('JWTAuthenticationBundle\Security\Authentication\Token\JWTUserToken')
+            ->getMockBuilder('JubaopenTech\JWTAuthenticationBundle\Security\Authentication\Token\JWTUserToken')
             ->disableOriginalConstructor()
             ->getMock();
 
@@ -45,7 +45,7 @@ class JWTProviderTest extends \PHPUnit_Framework_TestCase
     {
         /** @var TokenInterface $jwtUserToken */
         $jwtUserToken = $this
-            ->getMockBuilder('JWTAuthenticationBundle\Security\Authentication\Token\JWTUserToken')
+            ->getMockBuilder('JubaopenTech\JWTAuthenticationBundle\Security\Authentication\Token\JWTUserToken')
             ->disableOriginalConstructor()
             ->getMock();
 
@@ -69,7 +69,7 @@ class JWTProviderTest extends \PHPUnit_Framework_TestCase
     {
         /** @var TokenInterface $jwtUserToken */
         $jwtUserToken = $this
-            ->getMockBuilder('JWTAuthenticationBundle\Security\Authentication\Token\JWTUserToken')
+            ->getMockBuilder('JubaopenTech\JWTAuthenticationBundle\Security\Authentication\Token\JWTUserToken')
             ->disableOriginalConstructor()
             ->getMock();
 
@@ -92,7 +92,7 @@ class JWTProviderTest extends \PHPUnit_Framework_TestCase
     {
         /** @var TokenInterface $jwtUserToken */
         $jwtUserToken = $this
-            ->getMockBuilder('JWTAuthenticationBundle\Security\Authentication\Token\JWTUserToken')
+            ->getMockBuilder('JubaopenTech\JWTAuthenticationBundle\Security\Authentication\Token\JWTUserToken')
             ->disableOriginalConstructor()
             ->getMock();
 
@@ -115,7 +115,7 @@ class JWTProviderTest extends \PHPUnit_Framework_TestCase
     {
         /** @var TokenInterface $jwtUserToken */
         $jwtUserToken = $this
-            ->getMockBuilder('JWTAuthenticationBundle\Security\Authentication\Token\JWTUserToken')
+            ->getMockBuilder('JubaopenTech\JWTAuthenticationBundle\Security\Authentication\Token\JWTUserToken')
             ->disableOriginalConstructor()
             ->getMock();
 
@@ -136,7 +136,7 @@ class JWTProviderTest extends \PHPUnit_Framework_TestCase
         $provider = new JWTProvider($userProvider, $jwtManager, $eventDispatcher);
 
         $this->assertInstanceOf(
-            'JWTAuthenticationBundle\Security\Authentication\Token\JWTUserToken',
+            'JubaopenTech\JWTAuthenticationBundle\Security\Authentication\Token\JWTUserToken',
             $provider->authenticate($jwtUserToken)
         );
 
@@ -149,7 +149,7 @@ class JWTProviderTest extends \PHPUnit_Framework_TestCase
         $provider->setUserIdentityField('uid');
 
         $this->assertInstanceOf(
-            'JWTAuthenticationBundle\Security\Authentication\Token\JWTUserToken',
+            'JubaopenTech\JWTAuthenticationBundle\Security\Authentication\Token\JWTUserToken',
             $provider->authenticate($jwtUserToken)
         );
     }
@@ -159,7 +159,7 @@ class JWTProviderTest extends \PHPUnit_Framework_TestCase
      */
     protected function getJWTManagerMock()
     {
-        return $this->getMockBuilder('JWTAuthenticationBundle\Services\JWTManager')
+        return $this->getMockBuilder('JubaopenTech\JWTAuthenticationBundle\Services\JWTManager')
             ->disableOriginalConstructor()
             ->getMock();
     }
@@ -169,7 +169,7 @@ class JWTProviderTest extends \PHPUnit_Framework_TestCase
      */
     protected function getJWTEncoderMock()
     {
-        return $this->getMockBuilder('JWTAuthenticationBundle\Encoder\JWTEncoderInterface')
+        return $this->getMockBuilder('JubaopenTech\JWTAuthenticationBundle\Encoder\JWTEncoderInterface')
             ->disableOriginalConstructor()
             ->getMock();
     }

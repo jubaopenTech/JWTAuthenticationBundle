@@ -1,11 +1,11 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Functional\DependencyInjection;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Functional\DependencyInjection;
 
-use JWTAuthenticationBundle\DependencyInjection\JBPJWTAuthenticationExtension;
-use JWTAuthenticationBundle\JBPJWTAuthenticationBundle;
-use JWTAuthenticationBundle\Services\JWSProvider\DefaultJWSProvider;
-use JWTAuthenticationBundle\Tests\Functional\TestCase;
+use JubaopenTech\JWTAuthenticationBundle\DependencyInjection\JBPJWTAuthenticationExtension;
+use JubaopenTech\JWTAuthenticationBundle\JBPJWTAuthenticationBundle;
+use JubaopenTech\JWTAuthenticationBundle\Services\JWSProvider\DefaultJWSProvider;
+use JubaopenTech\JWTAuthenticationBundle\Tests\Functional\TestCase;
 use Symfony\Bundle\SecurityBundle\DependencyInjection\SecurityExtension;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -50,7 +50,7 @@ class JBPJWTAuthenticationExtensionTest extends TestCase
             ->getMock();
 
         $this->assertInstanceOf(
-            'JWTAuthenticationBundle\Encoder\DefaultEncoder',
+            'JubaopenTech\JWTAuthenticationBundle\Encoder\DefaultEncoder',
             $container->get($encoderNamespace)
         );
 

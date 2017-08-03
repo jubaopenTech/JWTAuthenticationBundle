@@ -1,12 +1,12 @@
 <?php
 
-namespace JWTAuthenticationBundle\Tests\Encoder;
+namespace JubaopenTech\JWTAuthenticationBundle\Tests\Encoder;
 
-use JWTAuthenticationBundle\Encoder\DefaultEncoder;
-use JWTAuthenticationBundle\Services\JWSProvider\DefaultJWSProvider;
-use JWTAuthenticationBundle\Services\JWSProvider\JWSProviderInterface;
-use JWTAuthenticationBundle\Signature\CreatedJWS;
-use JWTAuthenticationBundle\Signature\LoadedJWS;
+use JubaopenTech\JWTAuthenticationBundle\Encoder\DefaultEncoder;
+use JubaopenTech\JWTAuthenticationBundle\Services\JWSProvider\DefaultJWSProvider;
+use JubaopenTech\JWTAuthenticationBundle\Services\JWSProvider\JWSProviderInterface;
+use JubaopenTech\JWTAuthenticationBundle\Signature\CreatedJWS;
+use JubaopenTech\JWTAuthenticationBundle\Signature\LoadedJWS;
 
 /**
  * Tests the DefaultEncoder.
@@ -55,7 +55,7 @@ class DefaultEncoderTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests that calling DefaultEncoder::encode() with an unsigned JWS correctly fails.
      *
-     * @expectedException \JWTAuthenticationBundle\Exception\JWTEncodeFailureException
+     * @expectedException \JubaopenTech\JWTAuthenticationBundle\Exception\JWTEncodeFailureException
      */
     public function testEncodeFromUnsignedJWS()
     {
@@ -72,7 +72,7 @@ class DefaultEncoderTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests that calling DefaultEncoder::decode() with an unverified signature correctly fails.
      *
-     * @expectedException \JWTAuthenticationBundle\Exception\JWTDecodeFailureException
+     * @expectedException \JubaopenTech\JWTAuthenticationBundle\Exception\JWTDecodeFailureException
      */
     public function testDecodeFromUnverifiedJWS()
     {
@@ -89,7 +89,7 @@ class DefaultEncoderTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests that calling DefaultEncoder::decode() with an expired payload correctly fails.
      *
-     * @expectedException        \JWTAuthenticationBundle\Exception\JWTDecodeFailureException
+     * @expectedException        \JubaopenTech\JWTAuthenticationBundle\Exception\JWTDecodeFailureException
      * @expectedExceptionMessage Expired JWT Token
      */
     public function testDecodeFromExpiredPayload()
@@ -108,7 +108,7 @@ class DefaultEncoderTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests that calling DefaultEncoder::decode() with an iat set in the future correctly fails.
      *
-     * @expectedException        \JWTAuthenticationBundle\Exception\JWTDecodeFailureException
+     * @expectedException        \JubaopenTech\JWTAuthenticationBundle\Exception\JWTDecodeFailureException
      * @expectedExceptionMessage Invalid JWT Token
      */
     public function testDecodeWithInvalidIssudAtClaimInPayload()
