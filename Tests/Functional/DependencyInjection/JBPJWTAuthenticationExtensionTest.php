@@ -47,6 +47,7 @@ class JBPJWTAuthenticationExtensionTest extends TestCase
                 $cryptoEngine,
                 $signatureAlgorithm,
                 3600,
+                100
             ])
             ->getMock();
 
@@ -115,7 +116,7 @@ class JBPJWTAuthenticationExtensionTest extends TestCase
 
     private function dumpConfig($filename, array $configs = [])
     {
-        file_put_contents(self::$resourceDir.$filename.'.yml', @Yaml::dump(['jbp_jwt_authentication' => $configs]));
+        file_put_contents(self::$resourceDir.$filename.'.yml', @Yaml::dump(['jbpjwt_authentication' => $configs]));
     }
 
     public static function tearDownAfterClass()

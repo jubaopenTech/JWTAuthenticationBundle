@@ -37,7 +37,7 @@ class SubscribedTokenAuthenticationTest extends CompleteTokenAuthenticationTest
 
         $response = parent::testAccessSecuredRouteWithoutToken();
 
-        $this->assertSame('Custom JWT not found message', $response['message']);
+        $this->assertSame('Custom JWT not found message', $response['msg']);
     }
 
     public function testAccessSecuredRouteWithInvalidToken($token = 'dummy')
@@ -54,7 +54,7 @@ class SubscribedTokenAuthenticationTest extends CompleteTokenAuthenticationTest
 
         self::$subscriber->unsetListener(Events::JWT_INVALID);
 
-        $this->assertSame('Custom JWT invalid message', $response['message']);
+        $this->assertSame('Custom JWT invalid message', $response['msg']);
     }
 
     public function testAccessSecuredRouteWithInvalidJWTDecodedEvent()
@@ -68,7 +68,7 @@ class SubscribedTokenAuthenticationTest extends CompleteTokenAuthenticationTest
 
         $responseBody = json_decode(static::$client->getResponse()->getContent(), true);
 
-        $this->assertSame('Invalid JWT Token', $responseBody['message']);
+        $this->assertSame('Invalid JWT Token', $responseBody['msg']);
 
         self::$subscriber->unsetListener(Events::JWT_DECODED);
     }
@@ -88,7 +88,7 @@ class SubscribedTokenAuthenticationTest extends CompleteTokenAuthenticationTest
 
         $response = parent::testAccessSecuredRouteWithExpiredToken();
 
-        $this->assertSame('Custom JWT Expired Token message', $response['message']);
+        $this->assertSame('Custom JWT Expired Token message', $response['msg']);
 
         self::$subscriber->unsetListener(Events::JWT_EXPIRED);
     }

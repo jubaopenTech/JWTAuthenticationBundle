@@ -101,7 +101,7 @@ class CompleteTokenAuthenticationTest extends TestCase
             $this->ttl = null;
         }, $jwsProvider, get_class($jwsProvider))->__invoke();
 
-        $token = $encoder->encode(['username' => 'lexik']);
+        $token = $encoder->encode(['username' => 'jbp']);
         $this->assertArrayNotHasKey('exp', $encoder->decode($token));
 
         static::$client = static::createAuthenticatedClient($token);

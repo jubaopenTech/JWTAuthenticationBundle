@@ -4,6 +4,7 @@ namespace JWTAuthenticationBundle\Tests\Encoder;
 
 use JWTAuthenticationBundle\Encoder\DefaultEncoder;
 use JWTAuthenticationBundle\Services\JWSProvider\DefaultJWSProvider;
+use JWTAuthenticationBundle\Services\JWSProvider\JWSProviderInterface;
 use JWTAuthenticationBundle\Signature\CreatedJWS;
 use JWTAuthenticationBundle\Signature\LoadedJWS;
 
@@ -24,7 +25,7 @@ class DefaultEncoderTest extends \PHPUnit_Framework_TestCase
             'exp'      => time() + 3600,
         ];
 
-        $loadedJWS   = new LoadedJWS($payload, true);
+        $loadedJWS   = new LoadedJWS($payload, 100,true);
         $jwsProvider = $this->getJWSProviderMock();
         $jwsProvider
             ->expects($this->once())
@@ -81,7 +82,7 @@ class DefaultEncoderTest extends \PHPUnit_Framework_TestCase
         $jwsProvider
             ->expects($this->once())
             ->method('load')
-            ->willReturn(new LoadedJWS([], false));
+            ->willReturn(new LoadedJWS([],100, false));
 
         $encoder = new DefaultEncoder($jwsProvider);
         $encoder->decode('secrettoken');
@@ -95,7 +96,7 @@ class DefaultEncoderTest extends \PHPUnit_Framework_TestCase
      */
     public function testDecodeFromExpiredPayload()
     {
-        $loadedJWS   = new LoadedJWS(['exp' => time() - 3600], true);
+        $loadedJWS   = new LoadedJWS(['exp' => time() - 3600],100, true);
         $jwsProvider = $this->getJWSProviderMock();
         $jwsProvider
             ->expects($this->once())
@@ -114,7 +115,7 @@ class DefaultEncoderTest extends \PHPUnit_Framework_TestCase
      */
     public function testDecodeWithInvalidIssudAtClaimInPayload()
     {
-        $loadedJWS   = new LoadedJWS(['exp' => time() + 3600, 'iat' => time() + 3600], true);
+        $loadedJWS   = new LoadedJWS(['exp' => time() + 3600, 'iat' => time() + 3600],100, true);
         $jwsProvider = $this->getJWSProviderMock();
         $jwsProvider
             ->expects($this->once())

@@ -49,6 +49,7 @@ class DefaultJWSProvider implements JWSProviderInterface
      * @param string             $cryptoEngine
      * @param string             $signatureAlgorithm
      * @param int                $ttl
+     * @param int                $refresh_ttl
      *
      * @throws \InvalidArgumentException If the given algorithm is not supported
      */

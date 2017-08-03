@@ -15,7 +15,7 @@ class GetTokenTest extends TestCase
 
     public function testGetToken()
     {
-        static::$client->request('POST', '/login_check', ['_username' => 'lexik', '_password' => 'dummy']);
+        static::$client->request('POST', '/login_check', ['_username' => 'jbp', '_password' => 'dummy']);
 
         $response = static::$client->getResponse();
 
@@ -36,7 +36,7 @@ class GetTokenTest extends TestCase
             $e->setData($e->getData() + ['custom' => 'dummy']);
         });
 
-        static::$client->request('POST', '/login_check', ['_username' => 'lexik', '_password' => 'dummy']);
+        static::$client->request('POST', '/login_check', ['_username' => 'jbp', '_password' => 'dummy']);
 
         $body    = json_decode(static::$client->getResponse()->getContent(), true);
         $decoder = static::$kernel->getContainer()->get('jbp_jwt_authentication.encoder.default');
@@ -48,7 +48,7 @@ class GetTokenTest extends TestCase
 
     public function testGetTokenFromInvalidCredentials()
     {
-        static::$client->request('POST', '/login_check', ['_username' => 'lexik', '_password' => 'wrong']);
+        static::$client->request('POST', '/login_check', ['_username' => 'jbp', '_password' => 'wrong']);
 
         $response = static::$client->getResponse();
 
@@ -57,10 +57,10 @@ class GetTokenTest extends TestCase
         $this->assertFalse($response->isSuccessful());
         $this->assertSame(401, $response->getStatusCode());
 
-        $this->assertArrayHasKey('message', $body, 'The response should have a "message" key containing the failure reason.');
+        $this->assertArrayHasKey('msg', $body, 'The response should have a "message" key containing the failure reason.');
         $this->assertArrayHasKey('code', $body, 'The response should have a "code" key containing the response status code.');
 
-        $this->assertSame('Bad credentials', $body['message']);
+        $this->assertSame('Bad credentials', $body['msg']);
         $this->assertSame(401, $body['code']);
     }
 }

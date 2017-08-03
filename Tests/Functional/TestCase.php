@@ -45,7 +45,7 @@ abstract class TestCase extends WebTestCase
     {
         $client = static::$client ?: static::$kernel->getContainer()->get('test.client');
 
-        $client->request('POST', '/login_check', ['_username' => 'lexik', '_password' => 'dummy']);
+        $client->request('POST', '/login_check', ['_username' => 'jbp', '_password' => 'dummy']);
         $responseBody = json_decode($client->getResponse()->getContent(), true);
 
         if (!isset($responseBody['token'])) {
