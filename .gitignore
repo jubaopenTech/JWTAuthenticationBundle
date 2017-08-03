@@ -3,6 +3,7 @@
 /app/logs/*
 !app/cache/.gitkeep
 !app/logs/.gitkeep
+composer.lock
 
 # Email spool folder
 /app/spool/*
@@ -41,3 +42,4 @@
 **/Entity/*~
 
 /vendor/
+/.idea/
