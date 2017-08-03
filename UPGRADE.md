@@ -76,7 +76,7 @@ Events
   ```
   
   ```php
-  use JWTAuthenticationBundle\Event\JWTCreatedEvent;
+  use JubaopenTech\JWTAuthenticationBundle\Event\JWTCreatedEvent;
   
   class JWTCreatedListener
   {
@@ -99,7 +99,7 @@ Events
   ```
   
   ```php  
-  use JWTAuthenticationBundle\Event\JWTCreatedEvent;
+  use JubaopenTech\JWTAuthenticationBundle\Event\JWTCreatedEvent;
   use Symfony\Component\HttpFoundation\RequestStack;
 
   class JWTCreatedListener
@@ -148,8 +148,8 @@ KeyLoader
 * The `jbp_jwt_authentication.openssl_key_loader` has been removed  
   in favor of `jbp_jwt_authentication.key_loader`.
 
-* The class `JWTAuthenticationBundle\Services\OpenSSLKeyLoader` has been
-  removed in favor of `JWTAuthenticationBundle\Services\KeyLoader\OpenSSLKeyLoader`.
+* The class `JubaopenTech\JWTAuthenticationBundle\Services\OpenSSLKeyLoader` has been
+  removed in favor of `JubaopenTech\JWTAuthenticationBundle\Services\KeyLoader\OpenSSLKeyLoader`.
   
   It was used by the `jbp_jwt_authentication.openssl_key_loader` that has been removed.
   
