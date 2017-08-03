@@ -6,8 +6,6 @@ use JWTAuthenticationBundle\Response\JWTAuthenticationSuccessResponse;
 
 /**
  * Tests the JWTAuthenticationSuccessResponse.
- *
- * @author Robin Chalas <robin.chalas@gmail.com>
  */
 final class JWTAuthenticationSuccessResponseTest extends \PHPUnit_Framework_TestCase
 {

@@ -7,8 +7,6 @@ use Symfony\Component\HttpFoundation\Request;
 
 /**
  * AuthorizationHeaderTokenExtractorTest.
- *
- * @author Nicolas Cabot <n.cabot@lexik.fr>
  */
 class AuthorizationHeaderTokenExtractorTest extends \PHPUnit_Framework_TestCase
 {

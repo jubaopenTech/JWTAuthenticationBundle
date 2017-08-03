@@ -6,8 +6,6 @@ use JWTAuthenticationBundle\Services\KeyLoader\KeyLoaderInterface;
 
 /**
  * Base class for KeyLoader classes tests.
- *
- * @author Robin Chalas <robin.chalas@gmail.com>
  */
 abstract class AbstractTestKeyLoader extends \PHPUnit_Framework_TestCase
 {

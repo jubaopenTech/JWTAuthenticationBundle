@@ -7,8 +7,6 @@ use JWTAuthenticationBundle\Signature\LoadedJWS;
 
 /**
  * Tests the JWSProvider.
- *
- * @author Robin Chalas <robin.chalas@gmail.com>
  */
 abstract class AbstractJWSProviderTest extends \PHPUnit_Framework_TestCase
 {

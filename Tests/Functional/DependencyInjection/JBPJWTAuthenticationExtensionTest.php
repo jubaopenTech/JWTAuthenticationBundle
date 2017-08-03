@@ -15,8 +15,6 @@ use Symfony\Component\Yaml\Yaml;
 
 /**
  * Tests the bundle extension and the configuration of services.
- *
- * @author Robin Chalas <robin.chalas@gmail.com>
  */
 class JBPJWTAuthenticationExtensionTest extends TestCase
 {

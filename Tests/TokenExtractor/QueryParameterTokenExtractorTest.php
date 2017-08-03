@@ -7,8 +7,6 @@ use Symfony\Component\HttpFoundation\Request;
 
 /**
  * QueryParameterTokenExtractorTest.
- *
- * @author Nicolas Cabot <n.cabot@lexik.fr>
  */
 class QueryParameterTokenExtractorTest extends \PHPUnit_Framework_TestCase
 {

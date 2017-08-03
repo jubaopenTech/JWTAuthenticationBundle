@@ -6,8 +6,6 @@ use JWTAuthenticationBundle\Services\KeyLoader\OpenSSLKeyLoader;
 
 /**
  * OpenSSLKeyLoaderTest.
- *
- * @author Robin Chalas <robin.chalas@gmail.com>
  */
 class OpenSSLKeyLoaderTest extends AbstractTestKeyLoader
 {

@@ -7,8 +7,6 @@ use Symfony\Component\Security\Core\Exception\AuthenticationException;
 
 /**
  * AuthenticationFailureHandlerTest.
- *
- * @author Nicolas Cabot <n.cabot@lexik.fr>
  */
 class AuthenticationFailureHandlerTest extends \PHPUnit_Framework_TestCase
 {

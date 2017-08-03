@@ -8,8 +8,6 @@ use Symfony\Component\HttpFoundation\Request;
 
 /**
  * ChainTokenExtractorTest.
- *
- * @author Robin Chalas <robin.chalas@gmail.com>
  */
 class ChainTokenExtractorTest extends \PHPUnit_Framework_TestCase
 {

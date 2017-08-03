@@ -10,8 +10,6 @@ use JWTAuthenticationBundle\Signature\LoadedJWS;
 
 /**
  * Tests the DefaultEncoder.
- *
- * @author Robin Chalas <robin.chalas@gmail.com>
  */
 class DefaultEncoderTest extends \PHPUnit_Framework_TestCase
 {

@@ -9,8 +9,6 @@ use Symfony\Component\Security\Core\User\User;
 /**
  * Base class for classes testing the different cases of authentication via
  * JSON Web Token.
- *
- * @author Robin Chalas <robin.chalas@gmail.com>
  */
 class CompleteTokenAuthenticationTest extends TestCase
 {

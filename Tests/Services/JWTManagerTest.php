@@ -9,9 +9,6 @@ use Symfony\Component\Security\Core\User\User;
 
 /**
  * JWTManagerTest.
- *
- * @author Nicolas Cabot <n.cabot@lexik.fr>
- * @author Robin Chalas <robin.chalas@gmail.com>
  */
 class JWTManagerTest extends \PHPUnit_Framework_TestCase
 {

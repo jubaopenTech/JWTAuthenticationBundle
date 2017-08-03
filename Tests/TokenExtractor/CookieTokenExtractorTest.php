@@ -7,8 +7,6 @@ use Symfony\Component\HttpFoundation\Request;
 
 /**
  * CookieTokenExtractorTest.
- *
- * @author Nicolas Cabot <n.cabot@lexik.fr>
  */
 class CookieTokenExtractorTest extends \PHPUnit_Framework_TestCase
 {

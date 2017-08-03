@@ -10,8 +10,6 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 
 /**
  * AuthenticationSuccessHandlerTest.
- *
- * @author Nicolas Cabot <n.cabot@lexik.fr>
  */
 class AuthenticationSuccessHandlerTest extends \PHPUnit_Framework_TestCase
 {

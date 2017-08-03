@@ -7,8 +7,6 @@ use JWTAuthenticationBundle\Services\KeyLoader\RawKeyLoader;
 
 /**
  * Tests the LcobucciJWSProvider.
- *
- * @author Robin Chalas <robin.chalas@gmail.com>
  */
 final class LcobucciJWSProviderTest extends AbstractJWSProviderTest
 {

@@ -9,10 +9,6 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * JWTProviderTest.
- *
- * @group legacy
- *
- * @author Nicolas Cabot <n.cabot@lexik.fr>
  */
 class JWTUserProviderTest extends \PHPUnit_Framework_TestCase
 {

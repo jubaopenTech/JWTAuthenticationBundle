@@ -11,8 +11,6 @@ use JWTAuthenticationBundle\Response\JWTAuthenticationFailureResponse;
 
 /**
  * Tests the overriding authentication response mechanism.
- *
- * @author Robin Chalas <robin.chalas@gmail.com>
  */
 class SubscribedTokenAuthenticationTest extends CompleteTokenAuthenticationTest
 {

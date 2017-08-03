@@ -4,8 +4,6 @@ namespace JWTAuthenticationBundle\Tests\Functional;
 
 /**
  * Tests the built-in authentication response mechanism.
- *
- * @author Robin Chalas <robin.chalas@gmail.com>
  */
 class DefaultTokenAuthenticationTest extends CompleteTokenAuthenticationTest
 {

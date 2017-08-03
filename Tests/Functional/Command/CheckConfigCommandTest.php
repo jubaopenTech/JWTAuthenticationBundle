@@ -8,8 +8,6 @@ use Symfony\Component\Console\Tester\CommandTester;
 
 /**
  * CheckOpenSSLCommandTest.
- *
- * @author Nicolas Cabot <n.cabot@lexik.fr>
  */
 class CheckConfigCommandTest extends TestCase
 {

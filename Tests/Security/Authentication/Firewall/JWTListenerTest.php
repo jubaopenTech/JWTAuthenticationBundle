@@ -8,11 +8,6 @@ use JWTAuthenticationBundle\Security\Firewall\JWTListener;
 
 /**
  * JWTListenerTest.
- *
- * @group legacy
- *
- * @author Nicolas Cabot <n.cabot@lexik.fr>
- * @author Robin Chalas <robin.chalas@gmail.com>
  */
 class JWTListenerTest extends \PHPUnit_Framework_TestCase
 {
