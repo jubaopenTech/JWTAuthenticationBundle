@@ -17,8 +17,6 @@ final class JWTUserProvider implements UserProviderInterface
 {
     private $doctrine;
 
-    private $encodeFactory;
-
     private $field;
 
     private $providerClass;
@@ -26,14 +24,12 @@ final class JWTUserProvider implements UserProviderInterface
     /**
      * JWTUserProvider constructor.
      * @param Registry $doctrine
-     * @param EncoderFactory $encodeFactory
      * @param $providerClass
      * @param $field
      */
-    public function __construct(Registry $doctrine,EncoderFactory $encodeFactory,$providerClass,$field)
+    public function __construct(Registry $doctrine,$providerClass,$field)
     {
         $this->doctrine = $doctrine;
-        $this->encodeFactory = $encodeFactory;
         $this->providerClass = $providerClass;
         $this->field = $field;
     }

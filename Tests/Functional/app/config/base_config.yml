@@ -19,6 +19,7 @@ parameters:
     jwt_refresh_ttl: 604780  #1天
     authorization_header_key: Authorization
     authorization_prefix: jwt
+    jwt.provider.class: AppBundle\Entity\Member
 
 doctrine:
     dbal:
@@ -29,7 +30,6 @@ doctrine:
         user: '%database_user%'
         password: '%database_password%'
         charset: UTF8
-
     orm:
         auto_generate_proxy_classes: '%kernel.debug%'
         naming_strategy: doctrine.orm.naming_strategy.underscore

@@ -16,7 +16,7 @@ interface JWSProviderInterface
      *
      * @param array $payload
      *
-     * @return \JWTAuthenticationBundle\Signature\CreatedJWS
+     * @return \JubaopenTech\JWTAuthenticationBundle\Signature\CreatedJWS
      */
     public function create(array $payload);
 
@@ -25,7 +25,7 @@ interface JWSProviderInterface
      *
      * @param string $token
      *
-     * @return \JWTAuthenticationBundle\Signature\LoadedJWS
+     * @return \JubaopenTech\JWTAuthenticationBundle\Signature\LoadedJWS
      */
     public function load($token);
 }

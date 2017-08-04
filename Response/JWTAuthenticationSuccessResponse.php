@@ -32,6 +32,6 @@ final class JWTAuthenticationSuccessResponse extends JsonResponse
      */
     public function __construct($token, array $data = [])
     {
-        parent::__construct(['code'=>0,'msg'=>'success','token' => $token] + $data);
+        parent::__construct(['token' => $token] + $data);
     }
 }

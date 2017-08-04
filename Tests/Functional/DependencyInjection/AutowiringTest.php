@@ -9,6 +9,7 @@ use JubaopenTech\JWTAuthenticationBundle\Services\JWSProvider\DefaultJWSProvider
 use JubaopenTech\JWTAuthenticationBundle\Services\JWTManager;
 use JubaopenTech\JWTAuthenticationBundle\Tests\Stubs\Autowired;
 use JubaopenTech\JWTAuthenticationBundle\TokenExtractor\ChainTokenExtractor;
+use Doctrine\Bundle\DoctrineBundle\DependencyInjection\DoctrineExtension;
 use Symfony\Bundle\FrameworkBundle\DependencyInjection\FrameworkExtension;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\SecurityBundle\DependencyInjection\SecurityExtension;
@@ -25,6 +26,7 @@ class AutowiringTest extends \PHPUnit_Framework_TestCase
         $container->registerExtension(new SecurityExtension());
         $container->registerExtension(new FrameworkExtension());
         $container->registerExtension(new JBPJWTAuthenticationExtension());
+        $container->registerExtension(new DoctrineExtension());
 
         (new YamlFileLoader($container, new FileLocator([__DIR__.'/../app/config'])))->load('config_default.yml');
 
@@ -52,6 +54,7 @@ class AutowiringTest extends \PHPUnit_Framework_TestCase
         $container->registerExtension(new SecurityExtension());
         $container->registerExtension(new FrameworkExtension());
         $container->registerExtension(new JBPJWTAuthenticationExtension());
+        $container->registerExtension(new DoctrineExtension());
 
         (new YamlFileLoader($container, new FileLocator([__DIR__.'/../app/config'])))->load('config_custom_encoder.yml');
 
