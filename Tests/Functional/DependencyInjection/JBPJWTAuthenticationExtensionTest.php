@@ -2,8 +2,8 @@
 
 namespace JubaopenTech\JWTAuthenticationBundle\Tests\Functional\DependencyInjection;
 
-use JubaopenTech\JWTAuthenticationBundle\DependencyInjection\JBPJWTAuthenticationExtension;
-use JubaopenTech\JWTAuthenticationBundle\JBPJWTAuthenticationBundle;
+use JubaopenTech\JWTAuthenticationBundle\DependencyInjection\JbpJWTAuthenticationExtension;
+use JubaopenTech\JWTAuthenticationBundle\JbpJWTAuthenticationBundle;
 use JubaopenTech\JWTAuthenticationBundle\Services\JWSProvider\DefaultJWSProvider;
 use JubaopenTech\JWTAuthenticationBundle\Tests\Functional\TestCase;
 use Symfony\Bundle\SecurityBundle\DependencyInjection\SecurityExtension;
@@ -16,14 +16,14 @@ use Symfony\Component\Yaml\Yaml;
 /**
  * Tests the bundle extension and the configuration of services.
  */
-class JBPJWTAuthenticationExtensionTest extends TestCase
+class JbpJWTAuthenticationExtensionTest extends TestCase
 {
     private static $resourceDir;
 
     protected function setUp()
     {
         static::bootKernel();
-        self::$resourceDir = sys_get_temp_dir().'/JBPJWTAuthenticationBundle/';
+        self::$resourceDir = sys_get_temp_dir().'/JbpJWTAuthenticationBundle/';
 
         if (!is_dir(self::$resourceDir)) {
             (new Filesystem())->mkdir(self::$resourceDir);
@@ -100,9 +100,9 @@ class JBPJWTAuthenticationExtensionTest extends TestCase
     {
         $container = new ContainerBuilder();
         $container->registerExtension(new SecurityExtension());
-        $container->registerExtension(new JBPJWTAuthenticationExtension());
+        $container->registerExtension(new JbpJWTAuthenticationExtension());
 
-        (new JBPJWTAuthenticationBundle())->build($container);
+        (new JbpJWTAuthenticationBundle())->build($container);
         (new YamlFileLoader($container, new FileLocator([self::$resourceDir])))->load($file.'.yml');
 
         $container->getCompilerPassConfig()->setOptimizationPasses([]);
@@ -114,7 +114,7 @@ class JBPJWTAuthenticationExtensionTest extends TestCase
 
     private function dumpConfig($filename, array $configs = [])
     {
-        file_put_contents(self::$resourceDir.$filename.'.yml', @Yaml::dump(['jbpjwt_authentication' => $configs]));
+        file_put_contents(self::$resourceDir.$filename.'.yml', @Yaml::dump(['jbp_jwt_authentication' => $configs]));
     }
 
     public static function tearDownAfterClass()

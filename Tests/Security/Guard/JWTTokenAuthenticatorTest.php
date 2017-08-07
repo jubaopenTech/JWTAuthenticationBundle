@@ -32,7 +32,7 @@ class JWTTokenAuthenticatorTest extends \PHPUnit_Framework_TestCase
         $jwtManager
             ->expects($this->once())
             ->method('decode')
-            ->willReturn(['username' => 'lexik']);
+            ->willReturn(['username' => 'jbp']);
 
         $authenticator = new JWTTokenAuthenticator(
             $jwtManager,
@@ -94,11 +94,11 @@ class JWTTokenAuthenticatorTest extends \PHPUnit_Framework_TestCase
     public function testGetUser()
     {
         $userIdentityField = 'username';
-        $payload           = [$userIdentityField => 'lexik'];
+        $payload           = [$userIdentityField => 'jbp'];
         $rawToken          = 'token';
         $userRoles         = ['ROLE_USER'];
 
-        $userStub = new AdvancedUserStub('lexik', 'password', 'user@gmail.com', $userRoles);
+        $userStub = new AdvancedUserStub('jbp', 'password', 'user@gmail.com', $userRoles);
 
         $decodedToken = new PreAuthenticationJWTUserToken($rawToken);
         $decodedToken->setPayload($payload);
@@ -153,7 +153,7 @@ class JWTTokenAuthenticatorTest extends \PHPUnit_Framework_TestCase
     public function testGetUserWithInvalidUserThrowsException()
     {
         $userIdentityField = 'username';
-        $payload           = [$userIdentityField => 'lexik'];
+        $payload           = [$userIdentityField => 'jbp'];
 
         $decodedToken = new PreAuthenticationJWTUserToken('rawToken');
         $decodedToken->setPayload($payload);
@@ -174,7 +174,7 @@ class JWTTokenAuthenticatorTest extends \PHPUnit_Framework_TestCase
 
             $this->fail(sprintf('Expected exception of type "%s" to be thrown.', UserNotFoundException::class));
         } catch (UserNotFoundException $e) {
-            $this->assertSame('Unable to load an user with property "username" = "lexik". If the user identity has changed, you must renew the token. Otherwise, verify that the "jbp_jwt_authentication.user_identity_field" config option is correctly set.', $e->getMessageKey());
+            $this->assertSame('Unable to load an user with property "username" = "jbp". If the user identity has changed, you must renew the token. Otherwise, verify that the "jbp_jwt_authentication.user_identity_field" config option is correctly set.', $e->getMessageKey());
         }
     }
 
@@ -182,13 +182,13 @@ class JWTTokenAuthenticatorTest extends \PHPUnit_Framework_TestCase
     {
         $rawToken  = 'token';
         $userRoles = ['ROLE_USER'];
-        $payload   = ['username' => 'lexik'];
-        $userStub  = new AdvancedUserStub('lexik', 'password', 'user@gmail.com', $userRoles);
+        $payload   = ['username' => 'jbp'];
+        $userStub  = new AdvancedUserStub('jbp', 'password', 'user@gmail.com', $userRoles);
 
         $decodedToken = new PreAuthenticationJWTUserToken($rawToken);
         $decodedToken->setPayload($payload);
 
-        $jwtUserToken = new JWTUserToken($userRoles, $userStub, $rawToken, 'lexik');
+        $jwtUserToken = new JWTUserToken($userRoles, $userStub, $rawToken, 'jbp');
 
         $dispatcher = $this->getEventDispatcherMock();
         $dispatcher
@@ -211,7 +211,7 @@ class JWTTokenAuthenticatorTest extends \PHPUnit_Framework_TestCase
 
         $authenticator->getUser($decodedToken, $userProvider);
 
-        $this->assertEquals($jwtUserToken, $authenticator->createAuthenticatedToken($userStub, 'lexik'));
+        $this->assertEquals($jwtUserToken, $authenticator->createAuthenticatedToken($userStub, 'jbp'));
     }
 
     /**
@@ -220,13 +220,13 @@ class JWTTokenAuthenticatorTest extends \PHPUnit_Framework_TestCase
      */
     public function testCreateAuthenticatedTokenThrowsExceptionIfNotPreAuthenticatedToken()
     {
-        $userStub  = new AdvancedUserStub('lexik', 'test');
+        $userStub  = new AdvancedUserStub('jbp', 'test');
 
         (new JWTTokenAuthenticator(
            $this->getJWTManagerMock(),
            $this->getEventDispatcherMock(),
            $this->getTokenExtractorMock()
-       ))->createAuthenticatedToken($userStub, 'lexik');
+       ))->createAuthenticatedToken($userStub, 'jbp');
     }
 
     public function testOnAuthenticationFailureWithInvalidToken()

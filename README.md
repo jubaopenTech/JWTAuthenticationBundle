@@ -1,2 +1,2 @@
-JBPJWTAuthenticationBundle
+JbpJWTAuthenticationBundle
 ============================

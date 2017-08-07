@@ -13,9 +13,9 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
- * JBPJWtAuthenticationBundle.
+ * JbpJWtAuthenticationBundle.
  */
-class JBPJWTAuthenticationBundle extends Bundle
+class JbpJWTAuthenticationBundle extends Bundle
 {
     /**
      * {@inheritdoc}

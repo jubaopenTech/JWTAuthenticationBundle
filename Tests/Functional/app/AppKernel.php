@@ -30,7 +30,7 @@ class AppKernel extends Kernel
             new \Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new \Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new \Symfony\Bundle\SecurityBundle\SecurityBundle(),
-            new \JubaopenTech\JWTAuthenticationBundle\JBPJWTAuthenticationBundle(),
+            new \JubaopenTech\JWTAuthenticationBundle\JbpJWTAuthenticationBundle(),
             new \JubaopenTech\JWTAuthenticationBundle\Tests\Functional\Bundle\Bundle(),
         ];
     }
@@ -45,7 +45,7 @@ class AppKernel extends Kernel
      */
     public function getCacheDir()
     {
-        return sys_get_temp_dir().'/JBPJWTAuthenticationBundle/cache';
+        return sys_get_temp_dir().'/JbpJWTAuthenticationBundle/cache';
     }
 
     /**
@@ -53,7 +53,7 @@ class AppKernel extends Kernel
      */
     public function getLogDir()
     {
-        return sys_get_temp_dir().'/JBPJWTAuthenticationBundle/logs';
+        return sys_get_temp_dir().'/JbpJWTAuthenticationBundle/logs';
     }
 
     /**

@@ -24,17 +24,17 @@ class JWTUserProviderTest extends \PHPUnit_Framework_TestCase
     public function testLoadUserByUsername()
     {
         $userProvider = new JWTUserProvider(JWTUser::class);
-        $user         = $userProvider->loadUserByUsername('lexik');
+        $user         = $userProvider->loadUserByUsername('jbp');
 
         $this->assertInstanceOf(JWTUser::class, $user);
-        $this->assertSame('lexik', $user->getUsername());
+        $this->assertSame('jbp', $user->getUsername());
 
-        $this->assertSame($userProvider->loadUserByUsername('lexik'), $user, 'User instances should be cached.');
+        $this->assertSame($userProvider->loadUserByUsername('jbp'), $user, 'User instances should be cached.');
     }
 
     public function testRefreshUser()
     {
-        $user = new JWTUser('lexik');
+        $user = new JWTUser('jbp');
         $this->assertSame($user, (new JWTUserProvider(JWTUser::class))->refreshUser($user));
     }
 }

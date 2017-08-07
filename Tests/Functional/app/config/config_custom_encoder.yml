@@ -1,7 +1,7 @@
 imports:
     - { resource: base_config.yml }
 
-jbpjwt_authentication:
+jbp_jwt_authentication:
     private_key_path:   '%kernel.root_dir%/../var/jwt/private.pem'
     public_key_path:    '%kernel.root_dir%/../var/jwt/public.pem'
     pass_phrase:        testing

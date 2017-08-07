@@ -61,7 +61,7 @@ abstract class TestCase extends WebTestCase
     protected function setUp()
     {
         $fs = new Filesystem();
-        $fs->remove(sys_get_temp_dir().'/JBPJWTAuthenticationBundle/');
+        $fs->remove(sys_get_temp_dir().'/JbpJWTAuthenticationBundle/');
     }
 
     /**

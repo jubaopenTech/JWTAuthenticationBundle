@@ -4,6 +4,16 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
+    <parameters>
+        <parameter key="jwt_private_key_path">%kernel.root_dir%/../var/jwt/private.pem</parameter>
+        <parameter key="jwt_public_key_path">%kernel.root_dir%/../var/jwt/public.pem</parameter>
+        <parameter key="jwt_key_pass_phrase">123456</parameter>
+        <parameter key="jwt_token_ttl">604800</parameter>
+        <parameter key="jwt_refresh_ttl">604780</parameter>
+        <parameter key="authorization_header_key">Authorization</parameter>
+        <parameter key="authorization_prefix">jwt</parameter>
+    </parameters>
+
     <services>
         <!-- JWT Token Authenticator -->
         <service id="jbp_jwt_authentication.jwt_token_authenticator" alias="jbp_jwt_authentication.security.guard.jwt_token_authenticator" />
@@ -96,7 +106,7 @@
                 <argument>%jbp_jwt_authentication.user_identity_field%</argument>
             </call>
             <argument type="service" id="event_dispatcher"/>
-            <deprecated>The "%service_id%" service is deprecated since JBPJWTAuthenticationBundle version 2.0 and will be removed in 3.0</deprecated>
+            <deprecated>The "%service_id%" service is deprecated since JbpJWTAuthenticationBundle version 2.0 and will be removed in 3.0</deprecated>
         </service>
         <service id="jbp_jwt_authentication.security.authentication.listener" class="JubaopenTech\JWTAuthenticationBundle\Security\Firewall\JWTListener" public="false">
             <argument type="service" id="security.token_storage"/>
@@ -105,10 +115,10 @@
             <call method="setDispatcher">
                 <argument type="service" id="event_dispatcher"/>
             </call>
-            <deprecated>The "%service_id%" service is deprecated since JBPJWTAuthenticationBundle version 2.0 and will be removed in 3.0</deprecated>
+            <deprecated>The "%service_id%" service is deprecated since JbpJWTAuthenticationBundle version 2.0 and will be removed in 3.0</deprecated>
         </service>
         <service id="jbp_jwt_authentication.security.authentication.entry_point" class="JubaopenTech\JWTAuthenticationBundle\Security\Http\EntryPoint\JWTEntryPoint" public="false">
-            <deprecated>The "%service_id%" service is deprecated since JBPJWTAuthenticationBundle version 2.0 and will be removed in 3.0</deprecated>
+            <deprecated>The "%service_id%" service is deprecated since JbpJWTAuthenticationBundle version 2.0 and will be removed in 3.0</deprecated>
         </service>
         <service id="JubaopenTech\JWTAuthenticationBundle\Services\JWTTokenInterface" alias="jbp_jwt_authentication.jwt_manager" />
 

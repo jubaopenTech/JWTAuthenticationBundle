@@ -2,9 +2,9 @@
 
 namespace JubaopenTech\JWTAuthenticationBundle\Tests\Functional\DependencyInjection;
 
-use JubaopenTech\JWTAuthenticationBundle\DependencyInjection\JBPJWTAuthenticationExtension;
+use JubaopenTech\JWTAuthenticationBundle\DependencyInjection\JbpJWTAuthenticationExtension;
 use JubaopenTech\JWTAuthenticationBundle\Encoder\DefaultEncoder;
-use JubaopenTech\JWTAuthenticationBundle\JBPJWTAuthenticationBundle;
+use JubaopenTech\JWTAuthenticationBundle\JbpJWTAuthenticationBundle;
 use JubaopenTech\JWTAuthenticationBundle\Services\JWSProvider\DefaultJWSProvider;
 use JubaopenTech\JWTAuthenticationBundle\Services\JWTManager;
 use JubaopenTech\JWTAuthenticationBundle\Tests\Stubs\Autowired;
@@ -25,7 +25,7 @@ class AutowiringTest extends \PHPUnit_Framework_TestCase
         $container = $this->createContainerBuilder();
         $container->registerExtension(new SecurityExtension());
         $container->registerExtension(new FrameworkExtension());
-        $container->registerExtension(new JBPJWTAuthenticationExtension());
+        $container->registerExtension(new JbpJWTAuthenticationExtension());
         $container->registerExtension(new DoctrineExtension());
 
         (new YamlFileLoader($container, new FileLocator([__DIR__.'/../app/config'])))->load('config_default.yml');
@@ -53,7 +53,7 @@ class AutowiringTest extends \PHPUnit_Framework_TestCase
         $container = $this->createContainerBuilder();
         $container->registerExtension(new SecurityExtension());
         $container->registerExtension(new FrameworkExtension());
-        $container->registerExtension(new JBPJWTAuthenticationExtension());
+        $container->registerExtension(new JbpJWTAuthenticationExtension());
         $container->registerExtension(new DoctrineExtension());
 
         (new YamlFileLoader($container, new FileLocator([__DIR__.'/../app/config'])))->load('config_custom_encoder.yml');
@@ -72,7 +72,7 @@ class AutowiringTest extends \PHPUnit_Framework_TestCase
     private static function createContainerBuilder()
     {
         return new ContainerBuilder(new ParameterBag([
-            'kernel.bundles'          => ['FrameworkBundle' => FrameworkBundle::class, 'JBPJWTAuthenticationBundle' => JBPJWTAuthenticationBundle::class],
+            'kernel.bundles'          => ['FrameworkBundle' => FrameworkBundle::class, 'JbpJWTAuthenticationBundle' => JbpJWTAuthenticationBundle::class],
             'kernel.bundles_metadata' => [],
             'kernel.cache_dir'        => __DIR__,
             'kernel.debug'            => false,
