@@ -16,7 +16,7 @@ parameters:
     jwt_public_key_path: '%kernel.root_dir%/../var/jwt/public.pem'
     jwt_key_pass_phrase: 123456
     jwt_token_ttl: 604800   #7天
-    jwt_refresh_ttl: 604780  #1天
+    jwt_refresh_ttl: 259200  #3天
     authorization_header_key: Authorization
     authorization_prefix: jwt
     jwt.provider.class: AppBundle\Entity\Member
