@@ -49,7 +49,7 @@ jbp_jwt_authentication:
 	`_password:密码（md5）`
 返回值:
 ```json
-	{"token":token}
+	{"token":"token"}
 ```
 
 #### 4.请求验证
